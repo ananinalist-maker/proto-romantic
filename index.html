@@ -6,7 +6,8 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Romantic Guest House · гостьовий дім у каньйоні, Кам’янець-Подільський</title>
 <meta name="description" content="Гостьовий дім у каньйоні Смотрича, 900 м від Старого міста. Мансардні номери, чан на дровах, сад і вихід до річки. Залиште заявку на свої дати.">
-<meta name="theme-color" content="#0B1316">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#EFE5D3">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="uk_UA">
 <meta property="og:site_name" content="Romantic Guest House">
@@ -18,11 +19,13 @@
 <meta property="og:image:height" content="720">
 <meta property="og:image:alt" content="Двір гостьового дому навесні надвечір: альтанка з чаном, дрова, вогнище, дерева в цвіту">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B1316'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-style='italic' font-size='40' text-anchor='middle' fill='%23F2793D'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23243124'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-style='italic' font-size='38' text-anchor='middle' fill='%23E2B56E'%3ER%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..700&family=Noto+Serif+Display:ital,wdth,wght@0,62.5..100,300..700;1,62.5..100,300..700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="hero/hero.webp" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="hero-karpaty/poster_desktop_1440x462.jpg" media="(min-width: 761px)" fetchpriority="high">
+<link rel="preload" as="image" href="hero-karpaty/poster_mobile_750x990.jpg" media="(max-width: 760px)" fetchpriority="high">
+<script>document.documentElement.classList.add('js');</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -60,424 +63,523 @@
 }
 </script>
 <style>
+/* Romantic Guest House · карпатська редакція: вовна, смерека, свічка, коньяк */
 :root{
-  --night:#0B1316; --night-2:#101B1F; --night-3:#182629;
-  --cream:#F6EEE4; --cream-2:rgba(246,238,228,.76); --cream-3:rgba(246,238,228,.56);
-  --line-d:rgba(246,238,228,.14);
-  --mist:#EDF1ED; --mist-2:#E1E8E3; --paper:#F9FBF9;
-  --ink:#0E181B; --ink-2:#44535A; --line-l:rgba(14,24,27,.13);
-  --ember:#F2793D; --ember-2:#FF965C; --ember-ink:#A8431A; --ember-deep:#8E3612;
-  --glow:#F8B994;
-  --river:#2B6664; --river-l:#9ECDC2;
-  --dusk:#F2DCCD;
-  --f-d:"Noto Serif Display","Times New Roman",Georgia,serif;
-  --f-s:"Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  --r:22px; --r-s:14px;
-  --gut:clamp(16px,4vw,48px);
-  --ease:cubic-bezier(.2,.7,.2,1);
-  --strip:36px;
+  --wool:#EFE5D3; --linen:#E4D5BD; --card:#F6EFE3; --paper:#FFFCF6;
+  --ink:#1C1812; --bark:#5E4A35; --note:#75614B;
+  --cognac:#7A4E25; --cognac-2:#8A5A2C;
+  --spruce:#243124; --night:#12110D; --candle:#E2B56E;
+  --seam:#CDBA9C; --seam-strong:#9A8264; --fog:#B8A58A; --on-dark:#EFE5D3;
+  --river:#4F6F66;
+  --f-serif:"Cormorant Garamond","Times New Roman",Georgia,serif;
+  --f-sans:"Nunito Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --gutter:16px; --section:76px; --r:8px; --r-sm:4px;
+  --shadow:0 28px 54px -36px rgba(18,17,13,.55);
+  --glow:radial-gradient(ellipse 85% 65% at 50% 0%, rgba(226,181,110,.13), rgba(226,181,110,0) 62%);
+  --decor-shadow:drop-shadow(0 10px 14px rgba(18,17,13,.35));
+  --photo:saturate(.85) sepia(.08) contrast(.96) brightness(.98);
+  --vignette:inset 0 0 70px rgba(74,44,18,.26),inset 0 -60px 60px -60px rgba(18,17,13,.35);
 }
+@media (min-width:600px){ :root{ --gutter:24px; } }
+@media (min-width:768px){ :root{ --section:104px; } }
+@media (min-width:1100px){ :root{ --gutter:40px; --section:128px; } }
+
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-body{margin:0;background:var(--night);color:var(--ink);font:400 16.5px/1.6 var(--f-s);-webkit-font-smoothing:antialiased;overflow-x:clip}
-img,video{max-width:100%;display:block}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:72px}
+@media (min-width:1024px){ html{scroll-padding-top:80px} }
+@media (max-width:1023px){ html{scroll-padding-bottom:calc(88px + env(safe-area-inset-bottom))} }
+@media (prefers-reduced-motion:no-preference){ html{scroll-behavior:smooth} }
+body{margin:0;background:var(--wool);color:var(--ink);font:400 16.5px/1.62 var(--f-sans);overflow-x:hidden;overflow-x:clip;-webkit-font-smoothing:antialiased}
+@media (min-width:1100px){ body{font-size:17px} }
+body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;background:url(decor/grain-256.png);opacity:.38}
+::selection{background:var(--candle);color:var(--ink)}
+img,video{display:block;max-width:100%}
 img{height:auto}
 a{color:inherit}
+button{font:inherit;color:inherit}
+h1,h2,h3,p,figure,blockquote,dl,dd{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
 p{text-wrap:pretty}
 [hidden]{display:none!important}
-.sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-:focus-visible{outline:2.5px solid var(--ember);outline-offset:3px}
-.skip{position:absolute;left:12px;top:-80px;z-index:100;padding:12px 18px;border-radius:999px;background:var(--ember);color:#1B0D05;font-weight:600;text-decoration:none}
-.skip:focus{top:12px}
-.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.nw{white-space:nowrap}
+.sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .i--fill{fill:currentColor;stroke:none}
-section[id]{scroll-margin-top:72px}
+:focus-visible{outline:2px solid var(--cognac);outline-offset:3px;border-radius:var(--r-sm)}
+.tone-dark :focus-visible,.foot :focus-visible,.band :focus-visible,.lb :focus-visible{outline-color:var(--candle)}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;padding:12px 16px;border-radius:var(--r-sm);background:var(--ink);color:var(--wool);font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
 
-.strip{position:relative;z-index:45;background:#05090B;color:var(--cream-2);font:500 12px/1.4 var(--f-s);text-align:center;padding:9px var(--gut)}
-.strip p{margin:0 auto;max-width:64em}
+.wrap{position:relative;width:100%;max-width:1240px;margin-inline:auto;padding-inline:var(--gutter)}
+.section{position:relative;padding-block:var(--section)}
+.tone-dark{position:relative;isolation:isolate;background:var(--glow),var(--spruce);color:var(--on-dark)}
+.tone-dark::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url(decor/grain-256.png);opacity:.5}
+.tone-sand{background:var(--linen)}
 
-.nav{position:absolute;z-index:40;left:0;right:0;top:calc(var(--strip) + 12px);display:flex;align-items:center;gap:8px;padding:0 var(--gut);pointer-events:none}
-.nav > *{pointer-events:auto}
-.pill{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 17px;border-radius:999px;background:rgba(12,20,24,.36);border:1px solid rgba(255,255,255,.2);color:#FFF6EE;font:500 14px/1 var(--f-s);text-decoration:none;white-space:nowrap;-webkit-backdrop-filter:blur(14px) saturate(1.35);backdrop-filter:blur(14px) saturate(1.35);transition:background .25s,border-color .25s,color .25s}
-.pill:hover{background:rgba(12,20,24,.58);border-color:rgba(255,255,255,.36)}
-.pill .i{width:17px;height:17px}
-.pill--mono{width:42px;padding:0;justify-content:center;font:italic 400 23px/1 var(--f-d);font-stretch:70%;padding-bottom:2px}
-.pill--phone{background:rgba(242,121,61,.9);border-color:rgba(255,178,130,.7);color:#1B0D05;font-weight:600}
-.pill--phone:hover{background:var(--ember-2);border-color:var(--ember-2)}
-.nav__links{flex:1;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.nav__links::-webkit-scrollbar{display:none}
-.nav__links ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
-@media (max-width:1000px){
-  .nav__links.is-more{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 44px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 44px),transparent)}
-}
-@media (min-width:1001px){
-  .nav{position:fixed;top:var(--navY,48px)}
-  .nav::before{content:"";position:absolute;z-index:-1;left:0;right:0;top:calc(-1 * var(--navY,48px));height:calc(var(--navY,48px) + 100% + 30px);background:linear-gradient(180deg,rgba(11,19,22,.9) 0%,rgba(11,19,22,.72) 55%,rgba(11,19,22,0) 100%);opacity:0;transition:opacity .35s;pointer-events:none}
-  .nav.is-solid::before{opacity:1}
-  .nav.is-solid .pill:not(.pill--phone){background:rgba(11,19,22,.82);border-color:rgba(255,255,255,.14)}
-  .nav.is-solid .pill:not(.pill--phone):hover{background:rgba(24,38,41,.94)}
-  .nav__links{flex:none;margin-inline:auto;overflow:visible}
-}
+.decor{position:absolute;z-index:2;height:auto;max-width:none;pointer-events:none;-webkit-user-select:none;user-select:none;filter:var(--decor-shadow)}
+.lizhnyk{height:24px;background:url(decor/lizhnyk-tile-512.jpg) 0 0/auto 81px repeat-x;box-shadow:inset 0 1px 0 rgba(0,0,0,.25),inset 0 -1px 0 rgba(0,0,0,.25)}
+@media (min-width:1100px){ .lizhnyk{height:28px;background-size:auto 94px} }
+.medal{flex:none;display:grid;place-items:center;width:clamp(92px,10vw,148px);aspect-ratio:1;padding:15%;border-radius:50%;background:#F4ECDF;border:1px solid var(--seam);box-shadow:inset 0 0 0 6px #F4ECDF,inset 0 0 0 7px var(--seam),0 16px 30px -20px rgba(18,17,13,.55)}
+.medal img{width:100%;height:auto}
 
-.hero{--px:.5;--py:.3;--yb:.35;position:relative;height:calc(100vh - var(--strip));height:calc(100svh - var(--strip));min-height:600px;container-type:size;overflow:hidden;isolation:isolate;background:#3A2C28;color:var(--cream)}
-@media (max-aspect-ratio:5/4){.hero{--px:.7}}
-@media (max-aspect-ratio:4/5){.hero{--px:.78;--yb:.262}}
-@media (max-aspect-ratio:1/2){.hero{--px:.75}}
-.geo{--AR:1.79146;--W:max(100cqw, 100cqh * var(--AR));--H:max(100cqh, 100cqw / var(--AR));--T:calc((100cqh - var(--H)) * var(--py))}
-.plate{position:absolute;left:calc((100cqw - var(--W)) * var(--px));top:var(--T);width:var(--W);height:var(--H);max-width:none;margin:0;pointer-events:none;-webkit-user-select:none;user-select:none}
-.plate img{width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 50%}
-.plate--sky{object-fit:cover;object-position:50% 50%}
-.plate--bg{z-index:1;background:#3A2C28}
-.plate--sky{z-index:2;opacity:0;transition:opacity 1.6s ease}
-.plate--sky.is-on{opacity:1}
-.hero__scrim{position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(180deg,rgba(8,13,16,.7) 0%,rgba(8,13,16,.46) 20%,rgba(8,13,16,.24) 34%,rgba(8,13,16,0) 50%)}
-.hero__title{--fs:min(var(--H) * .31, 23.5cqw);position:absolute;z-index:4;left:0;right:0;bottom:calc(100cqh - max(var(--T) + var(--H) * var(--yb), 100px + var(--fs) * .73));margin:0;display:flex;justify-content:center;font-weight:400;font-size:var(--fs);pointer-events:none}
-.hero__lock{display:inline-grid;justify-items:stretch;transition:opacity 1.3s var(--ease),transform 1.8s var(--ease)}
-.js .hero:not(.is-ready) .hero__lock{opacity:0;transform:translateY(24%)}
-.hero__kick{display:flex;justify-content:space-between;gap:1.5em;margin:0 .35em .75em .2em;font:600 clamp(10px,.05em,13.5px)/1.2 var(--f-s);letter-spacing:.22em;text-transform:uppercase;color:rgba(255,244,234,.9);text-shadow:0 1px 8px rgba(0,0,0,.35)}
-.hero__kick span:last-child{color:var(--glow)}
-.hero__word{display:block;font:italic 400 1em/.78 var(--f-d);font-stretch:70%;letter-spacing:-.012em;color:#FFF4EA;padding:0 .06em 0 0;text-shadow:0 .02em .22em rgba(30,12,4,.28)}
-.plate--cut{z-index:5}
-.hero__shade{position:absolute;inset:0;z-index:6;pointer-events:none;background:linear-gradient(0deg,var(--night) 0%,rgba(11,19,22,.9) 12%,rgba(11,19,22,.55) 28%,rgba(11,19,22,.12) 44%,rgba(11,19,22,0) 52%)}
-.hero__credit{position:absolute;z-index:7;right:5px;top:24%;margin:0;writing-mode:vertical-rl;transform:rotate(180deg);font:500 10.5px/1.3 var(--f-s);letter-spacing:.03em;color:rgba(255,244,234,.78);text-shadow:0 1px 3px rgba(0,0,0,.7)}
-.hero__credit a{color:inherit;text-underline-offset:2px;text-decoration-color:rgba(255,244,234,.45)}
-.hero__credit a:hover{color:#fff}
-.hero__foot{position:absolute;z-index:8;left:0;right:0;bottom:0;padding:0 var(--gut) clamp(22px,5cqh,52px);display:flex;align-items:flex-end;justify-content:space-between;gap:28px}
-.hero__intro{max-width:480px}
-.hero__lede{margin:0 0 22px;font:400 clamp(16px,1.3vw,19px)/1.55 var(--f-s);color:rgba(255,246,238,.94)}
-.hero__cta{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;min-height:52px;padding:0 24px;border-radius:999px;border:1px solid transparent;font:600 15.5px/1.1 var(--f-s);text-decoration:none;text-align:center;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .2s}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font:italic 500 21px/1.2 var(--f-serif);letter-spacing:.01em;color:var(--cognac)}
+.eyebrow::before{content:"";width:30px;height:1px;flex:none;background:currentColor;opacity:.75}
+.tone-dark .eyebrow{color:var(--candle)}
+h2{margin-top:12px;font:500 clamp(38px,5.2vw + 16px,68px)/1.02 var(--f-serif);font-variant-numeric:lining-nums;letter-spacing:-.012em;text-wrap:balance}
+h2 em{font-style:italic;color:var(--cognac)}
+.tone-dark h2 em{color:var(--candle)}
+h3{font:500 clamp(24px,1.2vw + 16px,30px)/1.1 var(--f-serif)}
+.lead{margin-top:18px;max-width:58ch;color:var(--bark);font-size:1.03em}
+.tone-dark .lead{color:var(--fog)}
+.head{margin-bottom:36px}
+@media (min-width:1100px){ .head{margin-bottom:56px} }
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:var(--r-sm);border:1px solid transparent;
+  font:800 12.5px/1.2 var(--f-sans);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;text-align:center;white-space:nowrap;cursor:pointer;
+  transition:background-color .2s var(--ease),border-color .2s var(--ease),color .2s var(--ease),transform .2s var(--ease)}
 .btn .i{width:18px;height:18px}
-.btn:active{transform:translateY(1px)}
-.btn--ember{background:var(--ember);color:#1B0D05}
-.btn--ember:hover{background:var(--ember-2)}
-.btn--glass{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.28);color:#FFF6EE;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
-.btn--glass:hover{background:rgba(255,255,255,.18)}
-.btn--ink{background:var(--ink);color:var(--paper)}
-.btn--ink:hover{background:#22363B}
-.btn--line{background:transparent;border-color:var(--line-l);color:var(--ink)}
-.btn--line:hover{background:#fff;border-color:rgba(14,24,27,.3)}
-.hcard{flex:none;display:flex;align-items:center;gap:14px;width:min(390px,100%);padding:10px 18px 10px 10px;border-radius:20px;background:rgba(14,22,26,.4);border:1px solid rgba(255,255,255,.22);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);color:#FFF6EE;text-decoration:none;box-shadow:0 24px 60px -24px rgba(0,0,0,.7);transition:background .3s,border-color .3s}
-.hcard:hover{background:rgba(14,22,26,.56);border-color:rgba(255,255,255,.4)}
-.hcard img{width:112px;height:100px;object-fit:cover;border-radius:13px;flex:none}
-.hcard__body{display:grid;gap:3px;min-width:0}
-.hcard__rate{display:flex;align-items:center;gap:6px;font:600 12px/1.25 var(--f-s);color:#FFD6BA}
-.hcard__rate .i{width:13px;height:13px;color:#FFB27A}
-.hcard__name{font:italic 400 23px/1.05 var(--f-d);font-stretch:78%}
-.hcard__price{font-size:14.5px;line-height:1.3}
-.hcard__price b{font-weight:700}
-.hcard__src{font-size:11.5px;line-height:1.3;color:rgba(255,246,238,.66)}
-@media (max-width:900px){
-  .hero__foot{flex-direction:column;align-items:stretch;gap:14px}
-  .hcard{width:min(460px,100%)}
-}
-@media (max-width:760px){
-  .hero__shade{background:linear-gradient(0deg,var(--night) 0%,rgba(11,19,22,.92) 18%,rgba(11,19,22,.62) 34%,rgba(11,19,22,.14) 48%,rgba(11,19,22,0) 56%)}
-  .hero__foot{flex-direction:column;align-items:stretch;gap:14px}
-  .hero__lede{font-size:15.5px;margin-bottom:14px}
-  .hero__cta .btn{flex:1 1 0;padding:0 14px;min-height:50px}
-  .hcard{width:100%;padding:8px 14px 8px 8px}
-  .hcard img{width:86px;height:76px;border-radius:11px}
-  .hcard__name{font-size:20px}
-  .hero__credit{top:11.5%;right:3px;font-size:10px}
-  .hero__cta .i--arrow{display:none}
-  .pill--phone{width:42px;padding:0;justify-content:center}
-  .pill--phone span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-}
-@supports not (width:1cqw){
-  .plate{inset:0;width:100%;height:100%}
-  .plate img,.plate--sky{width:100%;height:100%;object-position:70% 40%}
-  .hero__title{top:14%;bottom:auto;font-size:min(22vw,240px)}
+.btn:active{transform:scale(.985)}
+.btn--primary{background:var(--cognac);color:var(--wool);box-shadow:0 16px 28px -18px rgba(122,78,37,.9)}
+.btn--ghost{background:transparent;border-color:rgba(28,24,18,.42);color:var(--ink)}
+@media (hover:hover){
+  .btn--primary:hover{background:var(--cognac-2);transform:translateY(-1px)}
+  .btn--ghost:hover{border-color:var(--ink);background:rgba(28,24,18,.04);transform:translateY(-1px)}
 }
 
-.sec{position:relative;padding:clamp(76px,10vw,136px) 0;overflow:hidden}
-.sec--night{background:var(--night);color:var(--cream)}
-.sec--night2{background:var(--night-2);color:var(--cream)}
-.sec--mist{background:var(--mist);color:var(--ink)}
-.sec--dusk{background:var(--dusk);color:var(--ink)}
-.wrap{position:relative;width:min(1200px,100% - 2 * var(--gut));margin-inline:auto}
-.eyebrow{display:inline-flex;align-items:center;gap:12px;margin:0 0 20px;font:600 12px/1 var(--f-s);letter-spacing:.2em;text-transform:uppercase;color:var(--ember-ink)}
-.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
-.sec--night .eyebrow,.sec--night2 .eyebrow{color:var(--ember)}
-.sec--dusk .eyebrow{color:var(--ember-deep)}
-h2{margin:0;font:400 clamp(40px,6.4vw,82px)/.98 var(--f-d);font-stretch:70%;letter-spacing:-.01em;text-wrap:balance}
-h2 em{font-style:italic;color:var(--ember-ink)}
-.sec--night h2 em,.sec--night2 h2 em{color:var(--glow)}
-.sec--dusk h2 em{color:var(--ember-deep)}
-h3{margin:0;font:500 clamp(23px,2.2vw,29px)/1.1 var(--f-d);font-stretch:78%}
-.place h2,.booking h2,.faq-sec h2{font-size:clamp(40px,4.9vw,66px)}
-.lead{margin:22px 0 0;max-width:38em;font-size:clamp(16.5px,1.25vw,18.5px);line-height:1.6;color:var(--ink-2)}
-.sec--night .lead,.sec--night2 .lead{color:var(--cream-2)}
-.topo{position:absolute;pointer-events:none;fill:none;stroke:var(--cream);stroke-width:1.1;opacity:.075;width:1150px;height:auto}
-.js [data-rv]{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform 1.1s var(--ease)}
-.js [data-rv].is-in{opacity:1;transform:none}
+/* смужка прототипу і шапка */
+.proto{position:relative;z-index:51;background:var(--night);color:var(--fog);font:500 12.5px/1.4 var(--f-sans);letter-spacing:.01em;text-align:center;padding:9px var(--gutter)}
+.proto b{color:var(--wool);font-weight:700}
+.header{position:sticky;top:0;z-index:50;background:rgba(239,229,211,.93);-webkit-backdrop-filter:saturate(1.1) blur(14px);backdrop-filter:saturate(1.1) blur(14px);border-bottom:1px solid rgba(205,186,156,.55);transition:border-color .35s,box-shadow .35s}
+.header.is-scrolled{border-bottom-color:var(--seam);box-shadow:0 10px 26px -22px rgba(18,17,13,.55)}
+.header__in{display:flex;align-items:center;gap:10px;height:64px}
+.logo{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-right:auto;text-decoration:none}
+.logo__mark{width:32px;height:32px;flex:none;fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.logo__name{display:flex;flex-direction:column;line-height:1}
+.logo__name b{font:600 26px/1 var(--f-serif);letter-spacing:.01em}
+.logo__name small{margin-top:4px;font:700 9px/1 var(--f-sans);letter-spacing:.24em;text-transform:uppercase;color:var(--bark)}
+.nav{display:none}
+.nav a{position:relative;padding:16px 2px;font:800 11.5px/1 var(--f-sans);letter-spacing:.17em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.nav a::after{content:"";position:absolute;left:2px;right:2px;bottom:9px;height:1px;background:var(--cognac);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav a:hover::after,.nav a:focus-visible::after{transform:none}
+.header__phone{display:none;align-items:center;gap:8px;min-height:44px;padding:0 16px;border:1px solid var(--seam-strong);border-radius:var(--r-sm);font:700 14px/1 var(--f-sans);letter-spacing:.02em;font-variant-numeric:lining-nums;white-space:nowrap;text-decoration:none;transition:background-color .2s,border-color .2s}
+.header__phone .i{width:17px;height:17px;color:var(--cognac)}
+.header__phone:hover{border-color:var(--ink);background:rgba(28,24,18,.04)}
+.icon-btn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:var(--r-sm);border:1px solid var(--seam-strong);background:transparent;color:var(--ink);text-decoration:none;cursor:pointer}
+.menu{padding:6px var(--gutter) 18px;border-top:1px solid var(--seam);background:rgba(239,229,211,.98)}
+.menu a{display:flex;align-items:center;justify-content:space-between;min-height:54px;border-bottom:1px solid var(--seam);font:500 26px/1 var(--f-serif);text-decoration:none}
+.menu a .i{opacity:.55;color:var(--cognac)}
+@media (min-width:1024px){
+  .header__in{display:grid;grid-template-columns:1fr auto 1fr;height:72px}
+  .logo{justify-self:start;margin-right:0}
+  .nav{display:flex;gap:30px;justify-self:center}
+  .header__phone{display:inline-flex;justify-self:end}
+  .header__call,.menu-btn{display:none}
+  .menu{display:none!important}
+}
 
-.why .topo{right:-360px;top:-180px}
-.why__grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:start}
-@media (min-width:1001px){.why h2{font-size:clamp(40px,4.4vw,64px)}}
-.why__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:36px}
-.why__list li{padding:24px 0 30px;border-top:1px solid var(--line-d)}
-.why__n{display:block;margin-bottom:16px;font:italic 400 16px/1 var(--f-d);letter-spacing:.06em;color:var(--ember)}
-.why__list h3{margin-bottom:10px;color:#FFF3E8}
-.why__list p{margin:0;font-size:15.5px;color:var(--cream-2)}
-.stats{margin:clamp(52px,6vw,84px) 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d)}
-.stats > div{padding:28px 20px 26px 24px;border-left:1px solid var(--line-d)}
-.stats > div:first-child{border-left:0;padding-left:0}
-.stats dt{font:italic 400 clamp(48px,5.2vw,72px)/1 var(--f-d);font-stretch:66%;color:#FFF3E8}
-.stats dd{margin:10px 0 0;font-size:14.5px;line-height:1.4;color:var(--cream-2)}
-.stats small{display:block;margin-top:5px;font-size:11.5px;letter-spacing:.04em;color:var(--cream-3)}
+/* перший екран: відеосмуга + редакційний заголовок */
+.hero{position:relative;background:var(--wool)}
+.band{position:relative;overflow:hidden;isolation:isolate;width:100%;height:min(32.08vw,max(300px,calc(100vh - 490px)));height:min(32.08vw,max(300px,calc(100svh - 490px)));background:var(--night)}
+.band__poster,.band__poster img,.band__video{position:absolute;inset:0;width:100%;height:100%;max-width:none}
+.band__poster img,.band__video{object-fit:cover}
+.band__video{opacity:0;transition:opacity .9s ease}
+.band.is-playing .band__video{opacity:1}
+.band::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;box-shadow:inset 0 0 120px rgba(18,17,13,.32),inset 0 -40px 60px -40px rgba(18,17,13,.4)}
+.band__pause{position:absolute;z-index:2;right:max(12px,calc((100% - 1240px) / 2 + var(--gutter) - 8px));bottom:14px;display:grid;place-items:center;width:40px;height:40px;padding:0;border-radius:50%;border:1px solid rgba(239,229,211,.5);background:rgba(18,17,13,.34);color:var(--wool);cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:background-color .2s,border-color .2s}
+.band__pause:hover{background:rgba(18,17,13,.55);border-color:var(--wool)}
+.band__pause .i{width:14px;height:14px}
+.band__pause .i-play{display:none}
+.band__pause[aria-pressed="true"] .i-play{display:block}
+.band__pause[aria-pressed="true"] .i-pause{display:none}
+@media (max-width:760px){ .band{height:min(120vw,max(240px,calc(100vh - 460px)));height:min(120vw,max(240px,calc(100svh - 460px)))} }
+.band__note{display:flex;align-items:flex-start;gap:8px;padding-top:10px;font:400 13px/1.45 var(--f-sans);color:var(--note)}
+.band__note .i{width:16px;height:16px;margin-top:1px;color:var(--cognac)}
+.masthead{padding-block:clamp(16px,1.8vw,28px) clamp(56px,7vw,104px);text-align:center}
+.masthead__kicker{font:800 11.5px/1.5 var(--f-sans);letter-spacing:.26em;text-transform:uppercase;color:var(--cognac)}
+.masthead__word{margin-top:6px;font:500 clamp(74px,4.6vw + 40px,128px)/.9 var(--f-serif);letter-spacing:-.014em;color:var(--ink)}
+.masthead__line{max-width:34em;margin:12px auto 0;font:italic 500 clamp(21px,.7vw + 16px,28px)/1.3 var(--f-serif);color:var(--bark);text-wrap:balance}
+.masthead__cta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:18px}
+.rating{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:14px;padding:0 16px;border:1px solid var(--seam-strong);border-radius:999px;background:rgba(246,239,227,.6);font:600 14px/1.2 var(--f-sans);font-variant-numeric:lining-nums;color:var(--ink);text-decoration:none;transition:border-color .2s,background-color .2s}
+.rating b{font-weight:800}
+.rating:hover{border-color:var(--ink);background:var(--card)}
+.stars{display:inline-flex;gap:2px;color:var(--cognac)}
+.stars .i{width:14px;height:14px}
+@media (min-width:761px) and (max-height:760px){
+  .masthead{padding-top:20px}
+  .masthead__word{font-size:clamp(72px,11vh,110px)}
+  .masthead__line{margin-top:10px}
+  .masthead__cta{margin-top:18px}
+}
+@media (max-width:599px){
+  .masthead__cta{flex-direction:column;align-items:stretch;max-width:400px;margin-inline:auto}
+}
+@media (max-width:480px){
+  .masthead__sep{display:none}
+  .masthead__kicker .nw{display:block}
+}
 
-.rooms__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.4vw,32px);margin-top:clamp(40px,5vw,64px)}
-.room{display:flex;flex-direction:column;background:var(--paper);border-radius:var(--r);overflow:hidden;box-shadow:0 1px 0 rgba(14,24,27,.05),0 40px 70px -48px rgba(14,24,27,.45)}
-.room__ph{position:relative;margin:0;aspect-ratio:4/3;overflow:hidden;background:var(--mist-2)}
-.room__ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
-.room:hover .room__ph img{transform:scale(1.035)}
-.room__ph figcaption{position:absolute;left:12px;bottom:12px;max-width:calc(100% - 24px);padding:7px 12px;border-radius:12px;background:rgba(11,19,22,.62);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#FFF6EE;font-size:12px;line-height:1.35}
-.room__body{flex:1;display:flex;flex-direction:column;gap:18px;padding:clamp(22px,2.6vw,34px)}
-.room h3{font-size:clamp(32px,3.2vw,42px);font-weight:400;font-stretch:72%;line-height:1}
-.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
-.chips li{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border-radius:999px;background:var(--mist);font-size:13.5px;font-weight:500;line-height:1.2}
-.chips .i{width:16px;height:16px;color:var(--river)}
-.room__body > p{margin:0;color:var(--ink-2)}
-.feat{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+/* чому напряму */
+.why__grid{display:grid;gap:36px}
+.why__list{display:grid}
+.why__list li{padding:22px 0 26px;border-top:1px solid rgba(239,229,211,.15)}
+.why__n{display:block;margin-bottom:12px;font:italic 500 30px/1 var(--f-serif);color:var(--candle)}
+.why__list h3{margin-bottom:8px;font:700 17px/1.35 var(--f-sans);color:var(--wool)}
+.why__list p{font-size:15.5px;color:var(--fog)}
+@media (min-width:640px){ .why__list{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:32px} }
+@media (min-width:1024px){
+  .why__grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:start}
+  .why .head{margin-bottom:0}
+}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:clamp(44px,6vw,80px);border-top:1px solid rgba(239,229,211,.15);border-bottom:1px solid rgba(239,229,211,.15)}
+.stats > div{padding:22px 12px 20px 16px;border-left:1px solid rgba(239,229,211,.15)}
+.stats > div:nth-child(odd){border-left:0;padding-left:0}
+.stats > div:nth-child(n+3){border-top:1px solid rgba(239,229,211,.15)}
+.stats dt{font:500 clamp(46px,3.2vw + 24px,72px)/1 var(--f-serif);font-variant-numeric:lining-nums;color:var(--wool)}
+.stats dd{margin-top:8px;font-size:14.5px;line-height:1.4;color:var(--on-dark)}
+.stats small{display:block;margin-top:4px;font:800 10px/1.3 var(--f-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--fog)}
+@media (min-width:900px){
+  .stats{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .stats > div,.stats > div:nth-child(odd){padding:26px 18px 24px 22px;border-left:1px solid rgba(239,229,211,.15)}
+  .stats > div:first-child{border-left:0;padding-left:0}
+  .stats > div:nth-child(n+3){border-top:0}
+}
+
+/* номери */
+@supports (overflow:clip){ .rooms,.chan{overflow-x:clip} }
+.decor--hang{top:-58px;right:-34px;width:clamp(150px,24vw,360px);transform:scaleX(-1) rotate(-6deg)}
+@media (min-width:1024px){
+  .decor--hang{top:-86px;right:-50px}
+  .rooms .head{padding-right:clamp(0px,24vw - 60px,300px)}
+}
+.rooms__grid{display:grid;gap:22px}
+@media (min-width:900px){ .rooms__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px} }
+.room{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--seam);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.room__ph{position:relative;isolation:isolate;aspect-ratio:4/3;overflow:hidden;background:var(--linen)}
+.room__ph::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:var(--vignette)}
+.room__ph img{width:100%;height:100%;object-fit:cover;filter:var(--photo);transition:transform 1.2s var(--ease)}
+@media (hover:hover){ .room:hover .room__ph img{transform:scale(1.035)} }
+.room__ph figcaption{position:absolute;z-index:1;left:12px;bottom:12px;max-width:calc(100% - 24px);padding:6px 11px;border-radius:var(--r-sm);background:rgba(18,17,13,.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:600 12.5px/1.35 var(--f-sans);color:var(--wool)}
+.room__body{display:flex;flex:1;flex-direction:column;gap:16px;padding:24px 22px}
+@media (min-width:1100px){ .room__body{padding:30px 32px 32px} }
+.room h3{font:500 clamp(34px,1.6vw + 22px,42px)/1.02 var(--f-serif);letter-spacing:-.01em}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips li{display:inline-flex;align-items:center;gap:7px;min-height:32px;padding:0 11px 0 9px;border-radius:var(--r-sm);background:var(--wool);border:1px solid var(--seam);font:600 13px/1.2 var(--f-sans)}
+.chips .i{width:16px;height:16px;color:var(--cognac)}
+.room__body > p{color:var(--bark)}
+.feat{display:grid;gap:10px}
 .feat li{display:flex;align-items:flex-start;gap:12px;font-size:15px;line-height:1.45}
-.feat .i{margin-top:1px;color:var(--river)}
-.room__foot{margin-top:auto;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;padding-top:22px;border-top:1px solid var(--line-l)}
-.price{margin:0}
-.price b{display:block;font:italic 400 clamp(40px,3.8vw,50px)/1 var(--f-d);font-stretch:68%}
-.price span{font-size:14px;color:var(--ink-2)}
-.price small{display:block;margin-top:2px;font-size:12.5px;color:var(--ink-2)}
-.rooms__note{margin-top:28px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.rooms__note p{display:flex;align-items:flex-start;gap:12px;margin:0;padding:16px 18px;border-radius:var(--r-s);background:var(--mist-2);font-size:14.5px;line-height:1.45;color:var(--ink)}
-.rooms__note .i{color:var(--river);margin-top:1px}
+.feat .i{margin-top:1px;color:var(--cognac)}
+.room__foot{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin-top:auto;padding-top:18px;border-top:1px solid var(--seam)}
+.price b{display:block;font:600 42px/1 var(--f-serif);font-variant-numeric:lining-nums;letter-spacing:-.01em}
+.price span{font:600 13.5px/1.3 var(--f-sans);color:var(--bark)}
+.price small{display:block;margin-top:2px;font-size:12.5px;color:var(--bark)}
+.room .btn{min-height:50px}
+.rooms__note{display:grid;gap:12px;margin-top:24px}
+@media (min-width:700px){ .rooms__note{grid-template-columns:repeat(2,minmax(0,1fr))} }
+.rooms__note p{display:flex;align-items:flex-start;gap:12px;padding:15px 18px;border-radius:var(--r-sm);border:1px solid var(--seam);background:rgba(246,239,227,.62);font-size:14.5px;line-height:1.45}
+.rooms__note .i{margin-top:1px;color:var(--cognac)}
 
-.chan .topo{left:-420px;bottom:-260px;transform:rotate(12deg)}
-.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:end}
-.split .lead{margin:0}
-.seasons{list-style:none;margin:clamp(40px,5vw,64px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-.season{position:relative;margin:0;aspect-ratio:3/4;border-radius:var(--r-s);overflow:hidden;background:var(--night-3)}
-.season img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
-.season:hover img{transform:scale(1.04)}
-.season::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,13,16,.86) 0%,rgba(8,13,16,.3) 34%,rgba(8,13,16,0) 56%)}
-.season figcaption{position:absolute;z-index:1;left:16px;right:16px;bottom:15px;color:#FFF6EE;font-size:13.5px;line-height:1.35}
-.season figcaption b{display:block;margin-bottom:6px;font:italic 400 32px/1 var(--f-d);font-stretch:70%;color:var(--glow)}
-.chan__grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);margin-top:clamp(44px,5vw,72px);align-items:start}
-.perks{list-style:none;margin:0;padding:0}
-.perks li{display:grid;grid-template-columns:50px minmax(0,1fr);gap:18px;padding:24px 0;border-top:1px solid var(--line-d)}
-.perks .ic{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;background:rgba(242,121,61,.13);color:var(--ember)}
-.perks .ic .i{width:23px;height:23px}
-.perks h3{margin-bottom:8px;color:#FFF3E8}
-.perks p{margin:0;font-size:15.5px;color:var(--cream-2)}
-.pull{margin:0;padding-top:26px;border-top:1px solid var(--line-d)}
-.pull p{margin:0;font:italic 400 clamp(27px,2.8vw,38px)/1.18 var(--f-d);font-stretch:80%;color:#FFF3E8}
-.pull footer{margin-top:18px;font-size:13px;color:var(--cream-3)}
-.pull footer b{color:var(--cream);font-weight:600}
-.also{margin:36px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
-.also dt{margin-right:8px;font:600 11.5px/1 var(--f-s);letter-spacing:.18em;text-transform:uppercase;color:var(--cream-3)}
-.also dd{margin:0;padding:8px 14px;border-radius:999px;border:1px solid var(--line-d);background:rgba(246,238,228,.05);font-size:14px;line-height:1.1;color:var(--cream)}
+/* чан і територія */
+.split{display:grid;gap:18px}
+.split .lead{margin-top:0}
+@media (min-width:1024px){ .split{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:end} }
+.decor--cone{display:none}
+@media (min-width:1024px){ .decor--cone{display:block;top:clamp(26px,3vw,44px);right:clamp(-26px,-1vw,-8px);width:clamp(96px,8vw,128px);transform:rotate(-24deg)} }
+.seasons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:clamp(36px,4.5vw,60px)}
+.season{position:relative;isolation:isolate;aspect-ratio:3/4;border-radius:var(--r-sm);overflow:hidden;background:rgba(18,17,13,.3)}
+.season img{width:100%;height:100%;object-fit:cover;filter:var(--photo);transition:transform 1.2s var(--ease)}
+@media (hover:hover){ .season:hover img{transform:scale(1.04)} }
+.season::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,rgba(18,17,13,.86) 0%,rgba(18,17,13,.3) 36%,rgba(18,17,13,0) 58%);box-shadow:var(--vignette)}
+.season figcaption{position:absolute;z-index:1;left:16px;right:16px;bottom:15px;font-size:13.5px;line-height:1.35;color:var(--wool)}
+.season figcaption b{display:block;margin-bottom:4px;font:italic 500 32px/1 var(--f-serif);color:var(--candle)}
+.chan__grid{display:grid;gap:32px;margin-top:clamp(40px,5vw,72px)}
+@media (min-width:1024px){ .chan__grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:start} }
+.perks li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:18px;padding:22px 0;border-top:1px solid rgba(239,229,211,.15)}
+.perks li:last-child{border-bottom:1px solid rgba(239,229,211,.15)}
+.perks .ic{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:rgba(226,181,110,.12);border:1px solid rgba(226,181,110,.3);color:var(--candle)}
+.perks .ic .i{width:22px;height:22px}
+.perks h3{margin-bottom:6px;font:700 17px/1.35 var(--f-sans);color:var(--wool)}
+.perks p{font-size:15.5px;color:var(--fog)}
+.pull{position:relative;padding:30px 26px 26px;border-radius:var(--r);background:rgba(18,17,13,.26);border:1px solid rgba(239,229,211,.12);box-shadow:0 30px 60px -40px rgba(0,0,0,.7)}
+.pull::before{content:"";display:block;width:34px;height:1px;margin-bottom:18px;background:var(--candle)}
+.pull p{font:italic 500 clamp(24px,1.6vw + 16px,32px)/1.22 var(--f-serif);color:var(--wool)}
+.pull footer{margin-top:18px;font-size:14px;color:var(--fog)}
+.pull footer b{font-weight:700;color:var(--on-dark)}
+@media (min-width:1024px){ .pull{padding:40px 40px 34px} }
+.also{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:36px}
+.also dt{margin-right:8px;font:800 11px/1 var(--f-sans);letter-spacing:.18em;text-transform:uppercase;color:var(--fog)}
+.also dd{padding:8px 13px;border-radius:var(--r-sm);border:1px solid rgba(239,229,211,.22);background:rgba(239,229,211,.05);font-size:14px;line-height:1.1;color:var(--on-dark)}
 
-.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(150px,15.5vw,212px);grid-auto-flow:dense;gap:10px;margin-top:clamp(36px,4.5vw,56px)}
-.gal button{position:relative;padding:0;border:0;border-radius:var(--r-s);overflow:hidden;cursor:zoom-in;background:var(--night-3);color:inherit}
-.gal img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease),opacity .4s}
-.gal button:hover img{transform:scale(1.045)}
+/* фото */
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(150px,15.5vw,212px);grid-auto-flow:dense;gap:10px}
+.gal button{position:relative;padding:0;border:0;border-radius:var(--r-sm);overflow:hidden;cursor:zoom-in;background:var(--seam)}
+.gal button::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:inset 0 0 64px rgba(74,44,18,.24),inset 0 0 0 1px rgba(28,24,18,.08)}
+.gal img{width:100%;height:100%;object-fit:cover;filter:var(--photo);transition:transform .9s var(--ease)}
+@media (hover:hover){ .gal button:hover img{transform:scale(1.04)} }
 .gal .w2{grid-column:span 2}
 .gal .h2{grid-row:span 2}
-.gal__hint{margin:18px 0 0;font-size:13px;color:var(--cream-3)}
+.gal__hint{margin-top:16px;font:700 12.5px/1.3 var(--f-sans);letter-spacing:.04em;color:var(--bark)}
 
-.place__grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,5vw,80px);align-items:start}
-.quote-s{margin:26px 0 0;padding:18px 20px;border-left:3px solid var(--ember);border-radius:0 14px 14px 0;background:rgba(242,121,61,.08)}
-.quote-s p{margin:0;font:italic 400 21px/1.35 var(--f-d);font-stretch:86%}
-.quote-s footer{margin-top:8px;font-size:12.5px;color:var(--ink-2)}
-.addr{display:flex;gap:14px;margin:26px 0 0;padding:18px 20px;border-radius:var(--r-s);background:var(--paper);font-style:normal;line-height:1.45;box-shadow:0 30px 50px -44px rgba(14,24,27,.5)}
-.addr .i{color:var(--ember-ink);margin-top:2px}
-.addr b{display:block;font-weight:600}
-.addr span{display:block;font-size:14.5px;color:var(--ink-2)}
-.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-.canyon{position:relative;margin:0;border-radius:var(--r);overflow:hidden;background:var(--paper);box-shadow:0 40px 70px -50px rgba(14,24,27,.5)}
+/* як дістатися: панель з фортецею (фото + живе небо + заголовок між шарами) */
+.lp{margin:0 0 clamp(44px,6vw,80px)}
+.lp__stage{position:relative;container-type:inline-size;isolation:isolate;aspect-ratio:16/7;border-radius:var(--r);overflow:hidden;background:#3b2f2a;box-shadow:var(--shadow)}
+.lp__bg,.lp__cut{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 40%;pointer-events:none;-webkit-user-select:none;user-select:none}
+.lp__bg{z-index:1}
+.lp__sky{opacity:0;transition:opacity 1.2s ease}
+.lp__sky.is-on{opacity:1}
+.lp__scrim{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(to bottom,rgba(18,17,13,.55) 0%,rgba(18,17,13,.36) 32%,rgba(18,17,13,.14) 52%,rgba(18,17,13,0) 68%)}
+.lp__title{position:absolute;z-index:3;left:5.9%;top:calc(34% - 10.8cqw);margin:0;font:500 13.2cqw/1 var(--f-serif);letter-spacing:-.018em;word-spacing:.8em;white-space:nowrap;color:var(--wool);text-shadow:0 .02em .22em rgba(18,17,13,.38);pointer-events:none;transition:opacity .9s var(--ease),transform 1.2s var(--ease)}
+.lp__title span{font-style:italic}
+.js .lp:not(.is-ready) .lp__title{opacity:0;transform:translateY(.08em)}
+.lp__cut{z-index:4}
+.lp__shade{position:absolute;inset:0;z-index:5;pointer-events:none;background:linear-gradient(to top,rgba(18,17,13,.62) 0%,rgba(18,17,13,.18) 30%,rgba(18,17,13,0) 48%)}
+.lp__card{position:absolute;z-index:6;left:3%;bottom:6%;max-width:320px;padding:16px 18px 17px;border-radius:var(--r);background:rgba(18,17,13,.4);-webkit-backdrop-filter:blur(12px) saturate(.9);backdrop-filter:blur(12px) saturate(.9);border:1px solid rgba(239,229,211,.24);box-shadow:inset 0 1px 0 rgba(239,229,211,.08),0 18px 40px -20px rgba(0,0,0,.55);color:var(--wool)}
+.lp__card-t{display:flex;align-items:center;gap:8px;font:500 27px/1.05 var(--f-serif)}
+.lp__card-t .i{width:18px;height:18px;color:var(--candle)}
+.lp__card p:not(.lp__card-t){margin-top:7px;font-size:14.5px;line-height:1.45;color:rgba(239,229,211,.92)}
+.lp__credit{position:absolute;z-index:6;right:14px;bottom:10px;margin:0;font:500 11px/1.35 var(--f-sans);text-align:right;color:rgba(239,229,211,.88);text-shadow:0 1px 4px rgba(0,0,0,.6)}
+.lp__credit a{color:inherit;text-decoration:underline;text-decoration-color:rgba(239,229,211,.4);text-underline-offset:2px}
+.lp__credit a:hover{color:#fff}
+@media (min-width:641px) and (max-width:1023px){
+  .lp__card{max-width:270px;padding:12px 14px 13px}
+  .lp__card-t{font-size:23px}
+  .lp__card p:not(.lp__card-t){margin-top:5px;font-size:13.5px}
+}
+@media (max-width:640px){
+  .lp__stage{aspect-ratio:4/5}
+  .lp__bg,.lp__cut{object-position:85% 50%}
+  .lp__title{left:6%;top:18.8cqw;font-size:18cqw;line-height:.9;white-space:normal;word-spacing:normal}
+  .lp__title span{display:block;padding-left:36cqw;font-size:.8em}
+  .lp__card{left:12px;right:12px;bottom:54px;max-width:none;padding:14px 16px}
+  .lp__card-t{font-size:25px}
+  .lp__credit{left:12px;right:12px;bottom:12px;text-align:left;font-size:10.5px}
+}
+@media (max-width:400px){
+  .lp__card{left:10px;right:10px;bottom:50px;padding:10px 12px 11px}
+  .lp__card-t{gap:6px;font-size:21px}
+  .lp__card-t .i{width:16px;height:16px}
+  .lp__card p:not(.lp__card-t){margin-top:4px;font-size:13px;line-height:1.4}
+  .lp__credit{left:10px;right:10px;bottom:10px}
+}
+.place__grid{display:grid;gap:40px}
+@media (min-width:1024px){ .place__grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start} }
+.quote-s{margin-top:26px;padding-left:18px;border-left:2px solid var(--cognac)}
+.quote-s p{font:italic 500 24px/1.28 var(--f-serif)}
+.quote-s footer{margin-top:8px;font-size:13.5px;color:var(--bark)}
+.addr{display:flex;align-items:flex-start;gap:12px;margin-top:26px;padding:18px;border-radius:var(--r);background:var(--card);border:1px solid var(--seam);font-style:normal}
+.addr .i{width:22px;height:22px;margin-top:3px;color:var(--cognac)}
+.addr b{display:block;font:600 25px/1.2 var(--f-serif)}
+.addr span span{display:block;margin-top:2px;font-size:14.5px;color:var(--bark)}
+.btns{display:grid;gap:10px;margin-top:18px}
+@media (min-width:600px){ .btns{display:flex;flex-wrap:wrap} }
+.canyon{position:relative;border-radius:var(--r);overflow:hidden;background:var(--card);border:1px solid var(--seam);box-shadow:var(--shadow)}
 .canyon__stage{position:relative}
 .canyon svg{display:block;width:100%;height:auto}
-.cn-ground{fill:#D8E0DA;stroke:var(--ink);stroke-width:1.4;stroke-linejoin:round}
-.cn-strata{fill:none;stroke:rgba(14,24,27,.17);stroke-width:1}
+.cn-ground{fill:#DCCAA9;stroke:var(--ink);stroke-width:1.4;stroke-linejoin:round}
+.cn-strata{fill:none;stroke:rgba(28,24,18,.17);stroke-width:1}
 .cn-river{fill:var(--river)}
 .cn-town{fill:var(--ink)}
 .cn-cross{fill:none;stroke:var(--ink);stroke-width:1.6}
-.cn-house{fill:var(--ember)}
+.cn-house{fill:var(--cognac)}
 .cn-door{fill:var(--paper)}
-.cn-path{fill:none;stroke:var(--ember-ink);stroke-width:2.4;stroke-dasharray:1 7;stroke-linecap:round}
-.cn-lead{fill:none;stroke:rgba(14,24,27,.45);stroke-width:1}
-.cn-lab{position:absolute;margin:0;font:600 13px/1.25 var(--f-s);color:var(--ink);white-space:nowrap}
-.cn-lab small{display:block;font-weight:400;font-size:12px;color:var(--ink-2)}
-.cn-lab em{display:block;font:italic 400 30px/1 var(--f-d);font-stretch:70%;color:var(--ember-ink)}
+.cn-path{fill:none;stroke:var(--cognac);stroke-width:2.4;stroke-dasharray:1 7;stroke-linecap:round}
+.cn-lead{fill:none;stroke:rgba(28,24,18,.45);stroke-width:1}
+.cn-lab{position:absolute;margin:0;font:700 13px/1.25 var(--f-sans);color:var(--ink);white-space:nowrap}
+.cn-lab small{display:block;font-weight:400;font-size:12px;color:var(--bark)}
+.cn-lab em{display:block;font:italic 500 32px/1 var(--f-serif);color:var(--cognac)}
 .cn-lab--town{left:4%;top:3.5%}
-.cn-lab--dist{left:4.5%;top:40%;white-space:normal;max-width:36%}
+.cn-lab--dist{left:4.5%;top:40%;max-width:36%;white-space:normal}
 .cn-lab--house{left:55%;top:47%}
 .cn-lab--river{left:61.8%;top:86%;transform:translateX(-50%);text-align:center}
-.cn-lab--canyon{right:3.5%;top:59%;text-align:right;font-weight:500;color:var(--ink-2)}
-.canyon figcaption{display:flex;justify-content:space-between;gap:12px;padding:12px 18px 14px;border-top:1px solid var(--line-l);font-size:12.5px;color:var(--ink-2)}
-.near{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px}
-.near li{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:12px;align-items:center;padding:13px 0;border-top:1px solid var(--line-l);font-size:15px;line-height:1.3}
-.near .i{color:var(--river)}
-.near small{display:block;margin-top:2px;font-size:11.5px;color:var(--ink-2)}
-.near b{font-weight:600;white-space:nowrap}
-.gnote{margin:20px 0 0;font-size:14.5px;color:var(--ink-2)}
-.gnote b{color:var(--ink);font-weight:600}
+.cn-lab--canyon{right:3.5%;top:59%;text-align:right;font-weight:600;color:var(--bark)}
+.canyon figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;padding:12px 18px 14px;border-top:1px solid var(--seam);font-size:12.5px;color:var(--bark)}
+.near{display:grid;margin-top:22px}
+@media (min-width:600px){ .near{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px} }
+.near li{display:grid;grid-template-columns:22px minmax(0,1fr) auto;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--seam);font-size:15px;line-height:1.3}
+.near .i{color:var(--cognac)}
+.near small{display:block;margin-top:2px;font-size:11.5px;color:var(--bark)}
+.near b{font-weight:700;white-space:nowrap}
+.gnote{margin-top:20px;font-size:14.5px;color:var(--bark)}
+.gnote b{font-weight:700;color:var(--ink)}
 
-.scores{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.35fr) minmax(0,.8fr);gap:16px;margin-top:clamp(36px,4.5vw,56px)}
-.score{padding:24px 24px 22px;border-radius:var(--r);background:rgba(255,255,255,.52);border:1px solid rgba(14,24,27,.08)}
-.score__src{margin:0 0 12px;font:600 11.5px/1 var(--f-s);letter-spacing:.18em;text-transform:uppercase;color:var(--ember-deep)}
-.score__top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-.score__num{font:italic 400 66px/.9 var(--f-d);font-stretch:66%}
-.score__of{font-size:14px;color:var(--ink-2)}
-.bars{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:8px}
-.bars li{display:grid;grid-template-columns:minmax(0,auto) minmax(40px,1fr) 32px;gap:10px;align-items:center;font-size:13px;line-height:1.2}
-.bars .t{height:6px;border-radius:6px;background:rgba(14,24,27,.1);overflow:hidden}
-.bars .t i{display:block;height:100%;width:var(--w);border-radius:inherit;background:var(--ink)}
-.bars .v{text-align:right;font-weight:600}
-.bars--sub li{grid-template-columns:118px minmax(40px,1fr) 32px}
-.quotes{margin-top:clamp(28px,3.5vw,44px);columns:3 290px;column-gap:16px}
-.q{break-inside:avoid;margin:0 0 16px;padding:24px 24px 20px;border-radius:var(--r);background:var(--paper);box-shadow:0 26px 44px -38px rgba(90,40,10,.6)}
-.q p{margin:0;font:450 19.5px/1.42 var(--f-d);font-stretch:88%}
-.q footer{margin-top:16px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 12px;font-size:12.5px;color:var(--ink-2)}
-.q footer b{color:var(--ink);font-weight:600}
-.reviews__fine{margin:10px 0 0;font-size:12.5px;color:var(--ink-2)}
+/* відгуки */
+.head--medal{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;column-gap:20px}
+.head--medal .lead{grid-column:1 / -1}
+@media (min-width:900px){
+  .head--medal{align-items:center}
+  .head--medal .lead{grid-column:1}
+  .head--medal .medal{grid-row:1 / span 2;grid-column:2}
+}
+.scores{display:grid;gap:14px}
+@media (min-width:768px){
+  .scores{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .score--bk{grid-column:1 / -1;order:3}
+}
+@media (min-width:1100px){
+  .scores{grid-template-columns:minmax(0,1.1fr) minmax(0,1.35fr) minmax(0,.8fr)}
+  .score--bk{grid-column:auto;order:0}
+}
+.score{padding:24px 22px;border-radius:var(--r);background:var(--card);border:1px solid var(--seam);box-shadow:var(--shadow)}
+@media (min-width:1100px){ .score{padding:30px 30px 28px} }
+.score__src{display:inline-flex;align-items:center;height:24px;padding:0 8px;border-radius:3px;border:1px solid var(--seam);font:800 10px/1 var(--f-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--cognac)}
+.score__top{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-top:14px}
+.score__num{font:500 66px/.9 var(--f-serif);font-variant-numeric:lining-nums;letter-spacing:-.02em}
+.score__of{font:600 14px/1.3 var(--f-sans);color:var(--bark)}
+.bars{display:grid;gap:8px;margin-top:18px}
+.bars li{display:grid;grid-template-columns:28px minmax(40px,1fr) 34px;align-items:center;gap:10px;font-size:13.5px;line-height:1.2}
+.bars--sub li{grid-template-columns:104px minmax(40px,1fr) 34px}
+.bars .t{height:5px;border-radius:5px;background:var(--linen);overflow:hidden}
+.bars .t i{display:block;width:var(--w);height:100%;border-radius:inherit;background:var(--spruce);transform-origin:left}
+.js .bars .t i{transform:scaleX(0);transition:transform 1.1s var(--ease)}
+.js .is-in .bars .t i{transform:none}
+.bars .v{text-align:right;font-weight:700}
+.quotes{margin-top:14px;columns:3 290px;column-gap:14px}
+.q{break-inside:avoid;margin:0 0 14px;padding:24px 22px 20px;border-radius:var(--r);background:var(--card);border:1px solid var(--seam)}
+.q p{font:italic 500 23px/1.28 var(--f-serif)}
+.q footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 12px;margin-top:16px;padding-top:12px;border-top:1px solid var(--seam);font-size:12.5px;color:var(--bark)}
+.q footer b{font:700 14px/1.2 var(--f-sans);color:var(--ink)}
+.reviews__fine{margin-top:10px;font-size:13px;color:var(--bark)}
 
-.booking .topo{right:-420px;top:-120px;transform:rotate(-8deg)}
-.booking__grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,5vw,84px);align-items:start}
-.contact{margin-top:34px;display:grid;gap:16px}
-.contact__phone{display:inline-flex;align-items:center;gap:14px;font:italic 400 clamp(34px,3.4vw,46px)/1 var(--f-d);font-stretch:70%;color:#FFF3E8;text-decoration:none}
-.contact__phone .i{width:26px;height:26px;color:var(--ember)}
-.contact__phone:hover{color:var(--glow)}
-.contact p{display:flex;align-items:flex-start;gap:12px;margin:0;font-size:15px;line-height:1.45;color:var(--cream-2)}
-.contact p .i{color:var(--ember);margin-top:1px}
-.form,.done{position:relative;padding:clamp(20px,3vw,36px);border-radius:26px;background:var(--night-2);border:1px solid var(--line-d);color-scheme:dark}
+/* бронювання */
+.booking__grid{display:grid;gap:36px}
+@media (min-width:1024px){ .booking__grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:72px;align-items:start} }
+.contact{display:grid;gap:14px;margin-top:30px}
+.contact__phone{display:inline-flex;align-items:center;gap:14px;font:500 clamp(34px,1.6vw + 24px,46px)/1 var(--f-serif);font-variant-numeric:lining-nums;color:var(--wool);text-decoration:none}
+.contact__phone .i{width:26px;height:26px;color:var(--candle)}
+.contact__phone:hover{color:var(--candle)}
+.contact p{display:flex;align-items:flex-start;gap:12px;padding-top:14px;border-top:1px solid rgba(239,229,211,.15);font-size:15px;line-height:1.45;color:var(--on-dark)}
+.contact p .i{margin-top:1px;color:var(--candle)}
+.still{position:relative;height:118px;margin-top:10px}
+.still img{position:absolute;height:auto;filter:var(--decor-shadow)}
+.still .c1{left:0;top:30px;width:132px;transform:rotate(-8deg)}
+.still .c2{left:124px;top:44px;width:104px;transform:rotate(13deg)}
+@media (min-width:1024px){
+  .still{height:170px;margin-top:22px}
+  .still .c1{left:6px;top:40px;width:190px}
+  .still .c2{left:182px;top:66px;width:146px}
+}
+.formcard{position:relative;padding:24px 18px 22px;border-radius:var(--r);background:var(--card);color:var(--ink);border-top:4px solid var(--candle);box-shadow:0 40px 80px -46px rgba(0,0,0,.75)}
+@media (min-width:1024px){ .formcard{padding:38px 38px 34px} }
+.formcard :focus-visible{outline-color:var(--cognac)}
 .form{display:grid;gap:18px}
-.row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.fld{display:grid;gap:8px;min-width:0}
-.lbl,.seg legend{font:500 13px/1.25 var(--f-s);letter-spacing:.02em;color:var(--cream-2)}
-.inp{width:100%;min-width:0;min-height:52px;padding:0 16px;border-radius:14px;border:1px solid rgba(246,238,228,.22);background:rgba(246,238,228,.05);color:var(--cream);font:400 16px/1.2 var(--f-s);transition:border-color .2s,background .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
-.inp::placeholder{color:rgba(246,238,228,.4)}
-.inp:hover{border-color:rgba(246,238,228,.36)}
-.inp:focus{outline:none;border-color:var(--ember);background:rgba(246,238,228,.08);box-shadow:0 0 0 3px rgba(242,121,61,.28)}
-.inp[aria-invalid="true"]{border-color:#FF8F7E;box-shadow:0 0 0 3px rgba(255,143,126,.2)}
-input[type="date"].inp{padding-right:12px;display:flex;align-items:center}
-input[type="date"].inp::-webkit-calendar-picker-indicator{filter:invert(.9) sepia(.3);opacity:.8;cursor:pointer}
-select.inp{padding-right:44px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23F6EEE4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
-select.inp option{background:#101B1F;color:#F6EEE4}
-textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
-.stepper{display:grid;grid-template-columns:52px minmax(0,1fr) 52px;min-height:52px;border:1px solid rgba(246,238,228,.22);border-radius:14px;overflow:hidden;background:rgba(246,238,228,.05)}
-.stepper button{border:0;background:rgba(246,238,228,.06);color:var(--cream);font:500 22px/1 var(--f-s);cursor:pointer;transition:background .2s}
-.stepper button:hover{background:rgba(246,238,228,.14)}
-.stepper button:focus-visible{outline-offset:-3px}
-.stepper input{width:100%;min-width:0;border:0;background:transparent;color:var(--cream);text-align:center;font:600 17px/1 var(--f-s);-moz-appearance:textfield;appearance:textfield}
+.row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (max-width:520px){ .row2:not(.row2--keep){grid-template-columns:minmax(0,1fr)} }
+.fld{display:grid;gap:7px;min-width:0}
+.lbl,.seg legend{padding:0;font:700 13px/1.2 var(--f-sans);color:var(--ink)}
+.inp{width:100%;min-width:0;height:52px;padding:0 14px;border-radius:var(--r-sm);border:1px solid var(--seam-strong);background:var(--paper);color:var(--ink);font:500 16px/1.2 var(--f-sans);-webkit-appearance:none;appearance:none;transition:border-color .15s,box-shadow .15s}
+.inp::placeholder{color:#8E7B64}
+.inp:focus{outline:none;border-color:var(--cognac);box-shadow:0 0 0 4px rgba(122,78,37,.15)}
+.inp[aria-invalid="true"]{border-color:#A3261C;box-shadow:0 0 0 3px rgba(163,38,28,.12)}
+input[type="date"].inp{display:block;padding-right:8px}
+input[type="date"].inp::-webkit-date-and-time-value{text-align:left}
+select.inp{padding-right:42px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%237A4E25' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+textarea.inp{height:auto;min-height:96px;padding:13px 14px;line-height:1.45;resize:vertical}
+.stepper{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;height:52px;padding:3px;border:1px solid var(--seam-strong);border-radius:var(--r-sm);background:var(--paper)}
+.stepper button{height:44px;border:0;border-radius:3px;background:var(--wool);font:600 22px/1 var(--f-sans);cursor:pointer;transition:background-color .15s}
+.stepper button:hover{background:var(--linen)}
+.stepper input{width:100%;min-width:0;border:0;background:transparent;text-align:center;font:700 16px/1 var(--f-sans);color:var(--ink);-moz-appearance:textfield;appearance:textfield}
 .stepper input::-webkit-inner-spin-button,.stepper input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
 .stepper input:focus{outline:none}
-.stepper:focus-within{border-color:var(--ember);box-shadow:0 0 0 3px rgba(242,121,61,.28)}
-.seg{margin:0;padding:0;border:0;min-width:0}
-.seg legend{padding:0;margin-bottom:10px}
+.stepper:focus-within{border-color:var(--cognac);box-shadow:0 0 0 4px rgba(122,78,37,.15)}
+.check{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border-radius:var(--r-sm);border:1px dashed var(--seam-strong);background:rgba(239,229,211,.5);font-size:15px;line-height:1.4;cursor:pointer}
+.check input{flex:none;width:22px;height:22px;margin:0;accent-color:var(--cognac);cursor:pointer}
+.check small{display:block;margin-top:2px;font-size:13px;color:var(--bark)}
+.seg{min-width:0;margin:0;padding:0;border:0}
+.seg legend{margin-bottom:8px}
 .seg__row{display:flex;flex-wrap:wrap;gap:8px}
-.seg label{position:relative;cursor:pointer}
+.seg label{position:relative;display:inline-flex;cursor:pointer}
 .seg input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
-.seg span{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 18px;border-radius:999px;border:1px solid rgba(246,238,228,.24);font-size:15px;color:var(--cream);transition:background .2s,color .2s,border-color .2s}
+.seg span{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 15px;border-radius:var(--r-sm);border:1px solid var(--seam-strong);background:var(--paper);font:700 14px/1 var(--f-sans);transition:background-color .15s,color .15s,border-color .15s}
 .seg span .i{width:18px;height:18px}
-.seg label:hover span{border-color:rgba(246,238,228,.45)}
-.seg input:checked + span{background:var(--cream);border-color:var(--cream);color:var(--night)}
-.seg input:focus-visible + span{outline:2.5px solid var(--ember);outline-offset:3px}
-.check{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border-radius:14px;border:1px dashed rgba(246,238,228,.26);cursor:pointer;font-size:15px;line-height:1.4;color:var(--cream)}
-.check input{flex:none;width:22px;height:22px;margin:0;accent-color:var(--ember);cursor:pointer}
-.check small{display:block;margin-top:2px;font-size:12.5px;color:var(--cream-3)}
-.form__err{margin:0;font-size:14px;color:#FFB0A2}
+.seg input:checked + span{background:var(--spruce);border-color:var(--spruce);color:var(--wool)}
+.seg input:focus-visible + span{outline:2px solid var(--cognac);outline-offset:2px}
+.form__err{font:700 13.5px/1.35 var(--f-sans);color:#A3261C}
 .form__err:empty{display:none}
-.form__fine{margin:0;font-size:12.5px;line-height:1.5;color:var(--cream-3)}
-.form .btn{width:100%;min-height:56px;font-size:16.5px}
+.form__fine{font-size:13px;text-align:center;color:var(--bark)}
+.form .btn{width:100%;min-height:56px;font-size:13px}
 .form .btn:disabled{opacity:.55;cursor:not-allowed}
-.done h3{font-size:clamp(30px,3vw,40px);font-weight:400;font-stretch:72%;color:#FFF3E8}
+.done h3{font:500 clamp(30px,1.6vw + 20px,38px)/1.1 var(--f-serif)}
 .done h3:focus{outline:none}
-.done > p{margin:14px 0 0;color:var(--cream-2)}
-.done__tag{display:inline-flex;align-items:center;gap:8px;margin:0 0 16px;padding:6px 12px;border-radius:999px;background:rgba(158,205,194,.14);color:var(--river-l);font-size:12.5px;font-weight:600}
-.bubble{margin:22px 0 0;padding:18px 20px;border-radius:20px 20px 20px 6px;background:#1C2B30;border:1px solid var(--line-d);font:400 14.5px/1.6 var(--f-s);white-space:pre-line;color:var(--cream)}
-.bubble__h{display:flex;align-items:center;gap:10px;margin:22px 0 -10px;font-size:12.5px;color:var(--cream-3)}
+.done > p{margin-top:10px;font-size:15px;color:var(--bark)}
+.done__tag{display:inline-flex;align-items:center;gap:8px;margin-bottom:14px;padding:6px 12px;border-radius:var(--r-sm);background:var(--linen);font:800 11px/1 var(--f-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--spruce)}
+.done__tag .i{width:16px;height:16px}
+.bubble__h{display:flex;align-items:center;gap:10px;margin:20px 0 -8px;font:700 12.5px/1.2 var(--f-sans);color:#4E5C66}
 .bubble__h .i{width:16px;height:16px}
-.done .btn{margin-top:22px}
+.bubble{margin-top:20px;padding:14px 16px;border-radius:16px 16px 16px 4px;background:#fff;border:1px solid #CAD6DE;box-shadow:0 0 0 10px #DCE6EC;font:400 14.5px/1.55 var(--f-sans);white-space:pre-line;overflow-wrap:anywhere}
+.done .btn{width:100%;margin-top:24px}
 
-.faq__grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(32px,5vw,80px);align-items:start}
-.faq{border-top:1px solid var(--line-l)}
-.faq details{border-bottom:1px solid var(--line-l)}
-.faq summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;list-style:none;cursor:pointer;font:500 clamp(21px,2vw,26px)/1.2 var(--f-d);font-stretch:84%}
+/* питання */
+.faq__sprig{display:none}
+@media (min-width:1024px){ .faq__sprig{display:block;width:clamp(190px,16vw,240px);height:auto;margin:40px 0 0 6px;transform:rotate(-20deg);filter:var(--decor-shadow);pointer-events:none;-webkit-user-select:none;user-select:none} }
+.faq__grid{display:grid;gap:8px}
+@media (min-width:1024px){ .faq__grid{grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:64px;align-items:start} }
+.faq details{border-bottom:1px solid var(--seam)}
+.faq details:first-of-type{border-top:1px solid var(--seam)}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:14px 0;list-style:none;cursor:pointer;font:500 24px/1.2 var(--f-serif)}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary:hover{color:var(--ember-ink)}
-.pm{flex:none;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;border:1px solid var(--line-l);color:var(--ink);transition:transform .35s var(--ease),background .3s,color .3s}
-.pm .i{width:16px;height:16px}
-.faq details[open] .pm{transform:rotate(45deg);background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.ans{padding:0 56px 24px 0;color:var(--ink-2)}
-.ans p{margin:0}
-.ans small{display:block;margin-top:8px;font-size:12px;color:var(--ink-2)}
+@media (min-width:768px){ .faq summary{min-height:76px;font-size:28px} }
+.pm{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;border:1px solid var(--seam-strong);transition:transform .3s var(--ease),background-color .2s,border-color .2s,color .2s}
+.pm .i{width:15px;height:15px}
+@media (hover:hover){ .faq summary:hover .pm{border-color:var(--ink)} }
+.faq details[open] .pm{transform:rotate(45deg);background:var(--spruce);border-color:var(--spruce);color:var(--wool)}
+.ans{padding:0 44px 22px 0;color:var(--bark)}
+.ans p{max-width:64ch}
+.ans small{display:block;margin-top:8px;font-size:12.5px;color:var(--note)}
 
-.foot{background:#070C0E;color:var(--cream-2);padding:clamp(60px,8vw,104px) 0 calc(30px + env(safe-area-inset-bottom))}
-.foot__brand{margin:0;font:italic 400 clamp(64px,11vw,150px)/.84 var(--f-d);font-stretch:66%;color:#FFF3E8;letter-spacing:-.01em}
-.foot__brand span{display:block;margin-top:14px;font:600 12px/1.6 var(--f-s);font-style:normal;letter-spacing:.24em;text-transform:uppercase;color:var(--glow)}
-.foot__grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:32px;margin-top:44px;padding-top:30px;border-top:1px solid var(--line-d)}
-.foot__t{margin:0 0 12px;font:600 11.5px/1 var(--f-s);letter-spacing:.18em;text-transform:uppercase;color:var(--cream-3)}
-.foot__grid p,.foot__grid li{margin:0;font-size:15px;line-height:1.6}
-.foot__grid ul{list-style:none;margin:0;padding:0}
-.foot a{color:var(--cream);text-decoration:none}
-.foot a:hover{color:var(--glow);text-decoration:underline;text-underline-offset:3px}
-.foot__credits{margin-top:44px;padding-top:24px;border-top:1px solid var(--line-d);display:grid;gap:6px;font-size:12.5px;line-height:1.6;color:var(--cream-3)}
-.foot__credits p{margin:0}
-.foot__credits a{color:var(--cream-2);text-decoration:underline;text-decoration-color:rgba(246,238,228,.3);text-underline-offset:2px}
+/* футер */
+.foot{position:relative;isolation:isolate;padding:clamp(56px,7vw,96px) 0 calc(40px + env(safe-area-inset-bottom));background:var(--glow),var(--night);color:var(--fog)}
+.foot::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url(decor/grain-256.png);opacity:.5}
+.foot__brand{font:500 clamp(72px,8vw + 30px,150px)/.86 var(--f-serif);letter-spacing:-.014em;color:var(--wool)}
+.foot__brand span{display:block;margin-top:16px;font:800 11.5px/1.6 var(--f-sans);letter-spacing:.24em;text-transform:uppercase;color:var(--candle)}
+.foot__grid{display:grid;gap:28px;margin-top:40px;padding-top:28px;border-top:1px solid rgba(239,229,211,.14)}
+@media (min-width:768px){ .foot__grid{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:32px} }
+.foot__t{margin-bottom:10px;font:italic 500 22px/1.2 var(--f-serif);color:var(--candle)}
+.foot__grid p,.foot__grid li{font-size:15px;line-height:1.7}
+.foot a{text-decoration:none;color:var(--on-dark)}
+.foot a:hover{color:var(--candle)}
+.foot__credits{display:grid;gap:6px;margin-top:40px;padding-top:22px;border-top:1px solid rgba(239,229,211,.14);font-size:12.5px;line-height:1.6}
+.foot__credits a{color:var(--on-dark);text-decoration:underline;text-decoration-color:rgba(239,229,211,.3);text-underline-offset:2px}
+@media (max-width:1023px){ .foot{padding-bottom:calc(112px + env(safe-area-inset-bottom))} }
 
-.mbar{position:fixed;z-index:50;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:8px;padding:7px 7px 7px 18px;border-radius:999px;background:rgba(11,19,22,.84);border:1px solid rgba(255,255,255,.15);-webkit-backdrop-filter:blur(16px) saturate(1.3);backdrop-filter:blur(16px) saturate(1.3);color:var(--cream);box-shadow:0 20px 44px -16px rgba(0,0,0,.75);transform:translateY(calc(100% + 30px));visibility:hidden;transition:transform .45s var(--ease),visibility 0s linear .45s}
-.mbar.is-on{transform:none;visibility:visible;transition:transform .45s var(--ease),visibility 0s}
+/* нижня панель на телефоні */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:center;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom)) 16px;background:rgba(246,239,227,.95);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--seam);transform:translateY(110%);visibility:hidden;transition:transform .35s var(--ease),visibility 0s linear .35s}
+.mbar.is-on{transform:none;visibility:visible;transition:transform .35s var(--ease),visibility 0s}
 .mbar__txt{flex:1;min-width:0;line-height:1.2}
-.mbar__txt b{display:block;font-size:14.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.mbar__txt small{display:block;font-size:11px;color:var(--cream-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.mbar__call{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.1);color:var(--cream)}
-.mbar .btn{flex:none;min-height:46px;padding:0 20px;font-size:15px}
-@media (min-width:1001px){.mbar{display:none}}
+.mbar__txt b{display:block;overflow:hidden;font:700 14.5px/1.25 var(--f-sans);white-space:nowrap;text-overflow:ellipsis}
+.mbar__txt small{display:block;overflow:hidden;font-size:12px;white-space:nowrap;text-overflow:ellipsis;color:var(--bark)}
+.mbar__call{flex:none;display:inline-flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:var(--r-sm);border:1px solid var(--seam-strong);background:var(--paper);color:var(--ink)}
+.mbar .btn{flex:none;min-height:50px;padding:0 20px}
+@media (min-width:1024px){ .mbar{display:none} }
+@media (max-width:370px){ .mbar{padding-left:12px} .mbar__txt b{font-size:13.5px} .mbar .btn{padding:0 14px} }
 
-.lb{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:64px 12px 72px;background:rgba(5,9,11,.95);color:var(--cream)}
-.lb[hidden]{display:none}
-.lb__fig{margin:0;display:grid;justify-items:center;gap:14px;max-width:min(1280px,100%)}
-.lb__fig img{max-width:100%;max-height:calc(100vh - 170px);max-height:calc(100svh - 170px);width:auto;height:auto;border-radius:10px;object-fit:contain;touch-action:pan-y}
-.lb__fig figcaption{max-width:52em;text-align:center;font-size:14px;line-height:1.45;color:var(--cream-2)}
-.lb__btn{position:absolute;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;transition:background .2s}
-.lb__btn:hover{background:rgba(255,255,255,.18)}
+/* перегляд фото */
+.lb{position:fixed;inset:0;z-index:95;display:grid;place-items:center;padding:64px 12px 72px;background:rgba(18,17,13,.95);color:var(--wool)}
+.lb__fig{display:grid;justify-items:center;gap:14px;max-width:min(1280px,100%)}
+.lb__fig img{width:auto;height:auto;max-width:100%;max-height:calc(100vh - 170px);max-height:calc(100svh - 170px);border-radius:var(--r-sm);object-fit:contain;touch-action:pan-y}
+.lb__fig figcaption{max-width:44em;text-align:center;font:italic 500 19px/1.35 var(--f-serif);color:rgba(239,229,211,.88)}
+.lb__btn{position:absolute;display:grid;place-items:center;width:48px;height:48px;border-radius:var(--r-sm);border:1px solid rgba(239,229,211,.28);background:rgba(239,229,211,.06);color:var(--wool);cursor:pointer;transition:background-color .2s}
+.lb__btn:hover{background:rgba(239,229,211,.14)}
 .lb__close{top:12px;right:12px}
 .lb__prev{left:14px;top:50%;transform:translateY(-50%)}
 .lb__next{right:14px;top:50%;transform:translateY(-50%)}
-.lb__count{position:absolute;top:26px;left:20px;margin:0;font-size:13px;letter-spacing:.12em;color:var(--cream-3)}
+.lb__count{position:absolute;top:26px;left:20px;font:700 13px/1 var(--f-sans);letter-spacing:.14em;color:var(--fog)}
 
-@media (max-width:1000px){
-  .why__grid,.place__grid,.booking__grid,.faq__grid,.chan__grid{grid-template-columns:minmax(0,1fr)}
-  .split{grid-template-columns:minmax(0,1fr);align-items:start}
-  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .stats > div:nth-child(3){border-left:0;padding-left:0}
-  .stats > div:nth-child(n+3){border-top:1px solid var(--line-d)}
-  .scores{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-  .score--bk{grid-column:1/-1;order:3}
-  .foot{padding-bottom:calc(100px + env(safe-area-inset-bottom))}
-}
 @media (max-width:760px){
   body{font-size:16px}
-  .why__list{grid-template-columns:minmax(0,1fr)}
-  .rooms__grid{grid-template-columns:minmax(0,1fr)}
-  .rooms__note{grid-template-columns:minmax(0,1fr)}
-  .seasons{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:74%;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gut);margin-inline:calc(-1 * var(--gut));padding:0 var(--gut) 6px;scrollbar-width:none}
+  .masthead{padding-top:14px}
+  .masthead__word{margin-top:4px}
+  .masthead__line{margin-top:10px}
+  .seasons{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:74%;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);margin-inline:calc(-1 * var(--gutter));padding:0 var(--gutter) 6px;scrollbar-width:none}
   .seasons::-webkit-scrollbar{display:none}
   .seasons li{scroll-snap-align:start}
   .gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px;gap:8px}
-  .near{grid-template-columns:minmax(0,1fr)}
-  .scores{grid-template-columns:minmax(0,1fr)}
-  .score--bk{grid-column:auto;order:0}
-  .row2{grid-template-columns:minmax(0,1fr)}
-  .row2--keep{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .rooms__grid .room__foot .btn{width:100%}
   input[type="date"].inp{padding:0 8px 0 12px}
-  input[type="date"].inp::-webkit-calendar-picker-indicator{margin:0;padding:0;width:14px}
-  .foot__grid{grid-template-columns:minmax(0,1fr)}
   .ans{padding-right:0}
   .cn-lab{font-size:11px}
   .cn-lab small{font-size:10.5px}
-  .cn-lab em{font-size:22px}
+  .cn-lab em{font-size:23px}
   .cn-lab--dist{top:37%}
   .cn-lab--house{top:44%}
   .lb__prev,.lb__next{top:auto;bottom:12px;transform:none}
@@ -490,16 +592,15 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
 }
 @media (max-width:380px){
   .cn-lab small{display:none}
-  .hero__kick{letter-spacing:.14em}
-  .mbar{padding-left:14px}
-  .mbar__txt b{font-size:13px}
-  .mbar__txt small{font-size:10.5px}
-  .mbar .btn{padding:0 16px}
+  .masthead__kicker{letter-spacing:.18em}
+}
+
+@media (prefers-reduced-motion:no-preference){
+  .js [data-rv]{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .js [data-rv].is-in{opacity:1;transform:none}
 }
 @media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
-  .js [data-rv]{opacity:1;transform:none}
-  .js .hero:not(.is-ready) .hero__lock{opacity:1;transform:none}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
 </style>
 </head>
@@ -507,10 +608,15 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
 <a class="skip" href="#main">До основного змісту</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-mark" viewBox="0 0 34 34"><path d="M2.5 8h6.5L13 22h8l4-14h6.5"/><path d="M14.5 22v-3.6l2.5-2.2 2.5 2.2V22" style="stroke:var(--mark-in,#8A5A2C)"/><path d="M7 27.3c1.7 0 1.7-1.4 3.3-1.4s1.7 1.4 3.3 1.4 1.7-1.4 3.4-1.4 1.7 1.4 3.3 1.4 1.7-1.4 3.4-1.4 1.6 1.4 3.3 1.4" style="stroke:var(--mark-in,#8A5A2C)"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5.5 3.5h3l1.8 4.6-2.3 1.4a11.5 11.5 0 0 0 6.5 6.5l1.4-2.3 4.6 1.8v3a2 2 0 0 1-2.2 2A17 17 0 0 1 3.5 5.7a2 2 0 0 1 2-2.2z"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.4a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.6" r="2.6"/></symbol>
-  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 5v14M17 5v14M3 9.5h4M3 14.5h4M17 9.5h4M17 14.5h4"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 14 14"><rect x="2" y="1" width="3" height="12" rx=".6"/><rect x="9" y="1" width="3" height="12" rx=".6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 14 14"><path d="M3.5 1.4v11.2L12.6 7z"/></symbol>
   <symbol id="i-tub" viewBox="0 0 24 24"><path d="M3 11.5h18v1.8a5.7 5.7 0 0 1-5.7 5.7H8.7A5.7 5.7 0 0 1 3 13.3zM8 8c-.7-1 .7-1.8 0-3M12 8c-.7-1 .7-1.8 0-3M16 8c-.7-1 .7-1.8 0-3M7 19l-1 2M17 19l1 2"/></symbol>
   <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c.8 3.2 5 5.2 5 10a5 5 0 0 1-10 0c0-2.3 1.1-3.7 2.4-4.9.3 1.6 1.1 2.5 2.2 2.9.3-2.8.4-5 .4-8z"/></symbol>
   <symbol id="i-water" viewBox="0 0 24 24"><path d="M3 8c2 0 2-1.5 4.5-1.5S10 8 12 8s2.5-1.5 4.5-1.5S19 8 21 8M3 13c2 0 2-1.5 4.5-1.5S10 13 12 13s2.5-1.5 4.5-1.5S19 13 21 13M3 18c2 0 2-1.5 4.5-1.5S10 18 12 18s2.5-1.5 4.5-1.5S19 18 21 18"/></symbol>
@@ -523,7 +629,6 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
   <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2.5 8.8a14 14 0 0 1 19 0M5.5 12.3a9.5 9.5 0 0 1 13 0M8.7 15.6a5 5 0 0 1 6.6 0M12 19.3h.01"/></symbol>
   <symbol id="i-tv" viewBox="0 0 24 24"><path d="M3 5h18v12H3zM8 21h8M12 17v4"/></symbol>
   <symbol id="i-kitchen" viewBox="0 0 24 24"><path d="M4 3h16v18H4zM4 10h16M8 6.5h.01M12 6.5h.01M8 14v3"/></symbol>
-  <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9zM17 9l4 6M21 9l-4 6"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
   <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
   <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
@@ -536,87 +641,80 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
   <symbol id="i-bus" viewBox="0 0 24 24"><path d="M6 17V5.5A1.5 1.5 0 0 1 7.5 4h9A1.5 1.5 0 0 1 18 5.5V17zM6 11h12M8.5 20v-3M15.5 20v-3M8.5 14h.01M15.5 14h.01"/></symbol>
   <symbol id="i-train" viewBox="0 0 24 24"><path d="M7 16V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2zM7 10h10M9 21l1.2-3M15 21l-1.2-3M10 14h.01M14 14h.01"/></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
-  <symbol id="i-child" viewBox="0 0 24 24"><path d="M12 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM8 21l1-7-3-3M16 21l-1-7 3-3M9 11h6"/></symbol>
   <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3 3 10.5l6.5 2.5L12 21l3.5-5.5M9.5 13 21 3"/></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24"><path d="M12 3.5c5 0 8.5 3 8.5 7.5S17 18.5 12 18.5c-1 0-2-.1-2.8-.4L5 20.5v-3.7c-1.5-1.4-2.5-3.4-2.5-5.8C2.5 6.5 7 3.5 12 3.5z"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
   <symbol id="i-swing" viewBox="0 0 24 24"><path d="M3 3.5h18M7.5 3.5v11M16.5 3.5v11M5 14.5h14v2.5H5z"/></symbol>
-  <symbol id="topo" viewBox="0 0 1100 800">
-<path d="M590 400C592 405 592 411 590 415C588 420 582 424 577 427C573 430 567 433 562 435C556 438 551 440 545 441C540 442 533 441 528 441C523 440 518 437 513 437C508 436 504 436 498 436C491 436 483 438 476 437C469 436 460 434 456 430C452 427 451 420 451 415C452 410 456 404 459 400C461 396 463 392 465 388C467 384 467 380 470 376C473 373 476 369 480 366C485 364 490 362 495 360C500 358 505 356 511 354C517 352 524 350 530 350C536 350 543 352 548 355C552 358 555 364 557 368C560 372 560 376 563 380C566 383 572 384 576 388C580 391 588 395 590 400Z"/>
-<path d="M674 400C678 410 677 423 671 433C666 442 652 450 641 457C630 464 618 469 607 473C595 478 584 483 573 485C561 487 548 486 537 485C525 484 516 480 505 479C494 478 484 480 470 480C457 480 439 484 424 481C410 478 393 472 386 464C378 455 378 441 380 430C382 420 392 409 396 400C400 391 402 384 405 375C407 367 406 357 411 348C415 340 423 331 432 325C441 319 453 315 465 311C476 307 488 303 501 300C513 298 528 294 540 296C553 297 567 303 576 310C585 317 589 329 595 337C600 344 602 351 610 357C618 363 632 366 643 373C653 381 669 390 674 400Z"/>
-<path d="M762 400C768 415 762 436 752 450C742 464 719 476 701 486C684 496 666 503 649 510C632 516 616 524 599 527C582 531 563 531 546 531C528 531 513 526 496 525C478 525 462 527 441 527C420 527 392 531 372 526C352 520 328 509 319 495C310 481 314 460 317 444C320 428 334 414 339 400C343 386 343 376 344 362C345 348 341 332 347 318C353 305 365 290 379 280C393 270 414 265 433 259C451 254 470 249 490 246C510 244 532 241 550 245C569 248 588 258 601 269C614 279 620 296 629 307C639 318 645 326 659 334C673 343 698 347 715 358C732 369 755 385 762 400Z"/>
-<path d="M851 400C857 421 845 448 829 467C813 485 780 499 757 512C734 525 711 534 689 544C667 554 648 565 626 571C604 577 579 580 555 580C532 581 510 577 486 576C461 576 437 579 409 578C382 577 345 579 320 570C295 561 269 542 259 523C250 504 258 476 263 456C267 435 283 418 286 400C289 382 282 367 280 348C279 329 270 305 277 285C284 266 302 245 322 232C343 219 373 212 399 205C426 199 453 195 480 193C506 192 535 191 560 197C584 203 607 218 625 231C642 245 648 266 663 279C677 292 689 299 711 310C732 320 769 326 792 341C816 356 845 379 851 400Z"/>
-<path d="M939 400C943 426 921 459 899 482C877 504 835 520 807 536C778 551 754 563 728 577C703 591 682 608 655 617C628 627 596 633 566 635C536 638 506 633 475 633C443 632 411 635 376 631C342 628 298 626 270 612C242 599 216 573 207 548C198 524 212 490 217 466C221 441 236 422 235 400C234 378 217 358 212 333C206 308 193 275 202 249C210 224 235 198 263 181C290 165 332 159 366 152C401 146 436 143 470 143C504 143 539 144 568 153C598 161 625 179 647 195C669 211 678 234 698 249C718 263 738 270 768 283C797 295 845 304 874 324C902 343 934 374 939 400Z"/>
-<path d="M1021 400C1021 432 988 469 959 495C931 521 882 537 850 556C818 575 795 592 768 610C740 629 718 654 686 668C655 682 615 692 578 696C541 701 502 696 463 694C423 692 383 692 343 685C303 678 254 671 224 652C193 632 170 599 162 569C154 540 172 503 176 474C179 446 189 426 183 400C176 374 147 349 137 317C127 286 111 243 122 212C133 180 168 149 203 131C239 112 292 107 335 101C378 96 420 95 461 96C501 98 542 100 577 110C612 120 643 141 670 158C697 176 711 200 737 215C764 231 794 238 830 253C867 268 926 281 958 305C989 330 1020 368 1021 400Z"/>
-<path d="M1094 400C1088 436 1043 477 1009 506C975 535 922 551 889 574C855 598 837 620 809 645C781 670 757 704 721 724C685 744 636 758 591 764C546 769 497 762 450 758C403 754 355 750 310 738C266 726 213 712 182 687C150 662 130 622 123 588C115 554 137 514 137 483C138 451 139 431 125 400C112 369 70 337 55 300C41 262 24 209 39 173C54 136 101 102 146 82C190 63 255 60 306 55C357 50 406 51 452 53C499 55 544 57 585 67C625 78 662 99 695 118C728 136 748 160 782 177C816 195 856 202 899 221C942 239 1008 258 1041 287C1073 317 1099 364 1094 400Z"/>
-  </symbol>
 </svg>
 
-<div class="strip" id="strip"><p>Прототип сайту для «Romantic Guest House». Зібрано за відкритими даними з Google-картки та Booking.com.</p></div>
+<div class="proto" role="note">Прототип сайту для <b>«Romantic Guest House»</b>. Зібрано за відкритими даними з Google-картки та Booking.com.</div>
 
-<header class="nav" id="nav">
-  <a class="pill pill--mono" href="#top" aria-label="Romantic Guest House, на початок сторінки">R</a>
-  <nav class="nav__links" aria-label="Розділи сайту">
-    <ul>
-      <li><a class="pill" href="#rooms">Номери</a></li>
-      <li><a class="pill" href="#place">Як дістатися</a></li>
-      <li><a class="pill" href="#reviews">Відгуки</a></li>
-      <li><a class="pill" href="#booking">Бронювання</a></li>
-    </ul>
+<header class="header" id="header">
+  <div class="wrap header__in">
+    <a class="logo" href="#top" aria-label="Romantic Guest House, на початок сторінки">
+      <svg class="logo__mark" viewBox="0 0 34 34" aria-hidden="true"><use href="#i-mark"/></svg>
+      <span class="logo__name"><b>Romantic</b><small>guest house</small></span>
+    </a>
+    <nav class="nav" aria-label="Розділи сайту">
+      <a href="#rooms">Номери</a>
+      <a href="#place">Як дістатися</a>
+      <a href="#reviews">Відгуки</a>
+      <a href="#booking">Бронювання</a>
+    </nav>
+    <a class="header__phone" href="tel:+380965145678"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>+380 96 514 5678</a>
+    <a class="icon-btn header__call" href="tel:+380965145678" aria-label="Подзвонити: +380 96 514 5678"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></a>
+    <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Меню"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button>
+  </div>
+  <nav class="menu" id="menu" hidden aria-label="Меню">
+    <a href="#rooms">Номери і ціни <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#chan">Чан і територія <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#gallery">Фото <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#place">Як дістатися <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#reviews">Відгуки <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#booking">Бронювання <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#faq">Питання <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
   </nav>
-  <a class="pill pill--phone" href="tel:+380965145678" aria-label="Подзвонити: +380 96 514 5678"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>+380 96 514 5678</span></a>
 </header>
 
 <main id="main">
 
 <section class="hero" id="top" aria-labelledby="hero-title">
-  <div class="geo plate plate--bg"><img src="hero/hero.webp" width="2560" height="1429" alt="Кам’янець-Подільська фортеця надвечір: вежі зі шпилями над кам’яними мурами" fetchpriority="high" decoding="async"></div>
-  <video class="geo plate plate--sky" muted loop playsinline preload="none" poster="hero/hero.webp" disablepictureinpicture aria-hidden="true" tabindex="-1"></video>
-  <div class="hero__scrim" aria-hidden="true"></div>
-  <h1 class="geo hero__title" id="hero-title">
-    <span class="hero__lock">
-      <span class="hero__kick" aria-hidden="true"><span>Кам’янець-Подільський</span><span>Guest House</span></span>
-      <span class="hero__word">Romantic</span>
-    </span>
-    <span class="sr"> Guest House, гостьовий дім у каньйоні Смотрича, Кам’янець-Подільський</span>
-  </h1>
-  <div class="geo plate plate--cut" aria-hidden="true"><img src="hero/hero-cutout.webp" width="2560" height="1429" alt="" decoding="async"></div>
-  <div class="hero__shade" aria-hidden="true"></div>
-  <p class="hero__credit">Фото фортеці: <a href="https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D0%BC%E2%80%99%D1%8F%D0%BD%D0%B5%D1%86%D1%8C-%D0%9F%D0%BE%D0%B4%D1%96%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%B0_%D1%84%D0%BE%D1%80%D1%82%D0%B5%D1%86%D1%8F_%D0%BD%D0%B0%D0%B4%D0%B2%D0%B5%D1%87%D1%96%D1%80.jpg" target="_blank" rel="noopener" title="Файл на Wikimedia Commons">Sak Anastasiya / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.uk" target="_blank" rel="noopener license">CC BY-SA 4.0</a>, змінено</p>
-  <div class="hero__foot">
-    <div class="hero__intro">
-      <p class="hero__lede">Гостьовий дім унизу каньйону Смотрича, біля річки. Старе місто за 900&nbsp;м нагорі, а тут сад, чан на дровах і домашні сніданки.</p>
-      <div class="hero__cta">
-        <a class="btn btn--ember" href="#booking">Залишити заявку <svg class="i i--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <a class="btn btn--glass" href="tel:+380965145678"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Подзвонити</a>
-      </div>
+  <div class="band" id="band">
+    <picture class="band__poster" aria-hidden="true">
+      <source media="(max-width: 760px)" srcset="hero-karpaty/poster_mobile_750x990.jpg" width="750" height="990">
+      <img src="hero-karpaty/poster_desktop_1440x462.jpg" width="1440" height="462" alt="" fetchpriority="high" decoding="async">
+    </picture>
+    <video class="band__video" id="bandVideo" autoplay muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true" tabindex="-1"></video>
+    <button class="band__pause" id="bandPause" type="button" aria-pressed="false" aria-label="Зупинити відео" hidden><svg class="i i--fill i-pause" viewBox="0 0 14 14" aria-hidden="true"><use href="#i-pause"/></svg><svg class="i i--fill i-play" viewBox="0 0 14 14" aria-hidden="true"><use href="#i-play"/></svg></button>
+  </div>
+  <div class="wrap">
+    <p class="band__note"><svg class="i" aria-hidden="true"><use href="#i-film"/></svg><span>Настроєве відео зібране для прототипу. У робочій версії тут будуть ваші фото й відео.</span></p>
+  </div>
+  <div class="wrap masthead">
+    <p class="masthead__kicker"><span class="nw">Гостьовий дім</span> <span class="masthead__sep" aria-hidden="true">·</span> <span class="nw">Кам’янець-Подільський</span></p>
+    <h1 class="masthead__word" id="hero-title">Romantic<span class="sr"> Guest House, гостьовий дім у каньйоні Смотрича, Кам’янець-Подільський</span></h1>
+    <p class="masthead__line">Унизу каньйону Смотрича, біля річки. Сад, чан на дровах і домашні сніданки.</p>
+    <div class="masthead__cta">
+      <a class="btn btn--primary" href="#booking">Залишити заявку <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn--ghost" href="tel:+380965145678"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Подзвонити</a>
     </div>
-    <a class="hcard" href="#rooms">
-      <img src="img/room-oriental-sm.jpg" width="520" height="347" alt="Номер Делюкс: червоний балдахін над ліжком, синя стіна, мансардна стеля" decoding="async">
-      <span class="hcard__body">
-        <span class="hcard__rate"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg>4,9 · 159 відгуків у Google</span>
-        <span class="hcard__name">Номер Делюкс, 25&nbsp;м²</span>
-        <span class="hcard__price"><b>1&nbsp;374&nbsp;грн</b> за ніч для двох</span>
-        <span class="hcard__src">ціна Booking.com на будні, жовтень 2026</span>
-      </span>
-    </a>
+    <a class="rating" href="#reviews"><span class="stars" aria-hidden="true"><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg></span><span><b>4,9</b> · 159 відгуків у Google</span></a>
   </div>
 </section>
 
-<section class="sec sec--night why" id="why" aria-labelledby="why-title">
-  <svg class="topo" viewBox="0 0 1100 800" aria-hidden="true" focusable="false"><use href="#topo"/></svg>
+<section class="section tone-dark why" id="why" aria-labelledby="why-title">
   <div class="wrap">
     <div class="why__grid">
-      <div data-rv>
+      <div class="head" data-rv>
         <p class="eyebrow">Чому напряму</p>
         <h2 id="why-title">Номер, чан і сніданки <em>одним повідомленням</em></h2>
         <p class="lead">На готовому сайті заявка одразу прийде господарям у месенджер. У ній видно дати, кількість гостей і все, що ви хочете додати.</p>
       </div>
       <ol class="why__list" data-rv>
-        <li><span class="why__n">01</span><h3>Чан на ваш вечір</h3><p>Чан оплачується окремо, і гості радять домовлятися про нього заздалегідь. Позначте це в заявці разом з датами.</p></li>
-        <li><span class="why__n">02</span><h3>Сніданки від господині</h3><p>У відгуках згадують драники, сирники, омлет і щоденну домашню випічку. Про сніданки й вечері можна спитати одразу в заявці.</p></li>
-        <li><span class="why__n">03</span><h3>Маршрут у каньйон</h3><p>Будинок стоїть унизу, біля води. Гості пишуть, що після бронювання господарі надсилають, як доїхати.</p></li>
-        <li><span class="why__n">04</span><h3>Місце для компанії</h3><p>Для двох є номери Делюкс, для родини апартаменти на 59&nbsp;м² до чотирьох гостей. Додаткове ліжко 150&nbsp;грн за особу за ніч.</p></li>
+        <li><span class="why__n" aria-hidden="true">01</span><h3>Чан на ваш вечір</h3><p>Чан оплачується окремо, і гості радять домовлятися про нього заздалегідь. Позначте це в заявці разом з датами.</p></li>
+        <li><span class="why__n" aria-hidden="true">02</span><h3>Сніданки від господині</h3><p>У відгуках згадують драники, сирники, омлет і щоденну домашню випічку. Про сніданки й вечері можна спитати одразу в заявці.</p></li>
+        <li><span class="why__n" aria-hidden="true">03</span><h3>Маршрут у каньйон</h3><p>Будинок стоїть унизу, біля води. Гості пишуть, що після бронювання господарі надсилають, як доїхати.</p></li>
+        <li><span class="why__n" aria-hidden="true">04</span><h3>Місце для компанії</h3><p>Для двох є номери Делюкс, для родини апартаменти на 59&nbsp;м² до чотирьох гостей. Додаткове ліжко 150&nbsp;грн за особу за ніч.</p></li>
       </ol>
     </div>
     <dl class="stats" data-rv>
@@ -628,18 +726,19 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
   </div>
 </section>
 
-<section class="sec sec--mist rooms" id="rooms" aria-labelledby="rooms-title">
+<section class="section rooms" id="rooms" aria-labelledby="rooms-title">
+  <img class="decor decor--hang" src="decor/sprig-cone.webp" width="640" height="636" alt="" aria-hidden="true" loading="lazy" decoding="async">
   <div class="wrap">
-    <div data-rv>
+    <div class="head" data-rv>
       <p class="eyebrow">Номери і ціни</p>
       <h2 id="rooms-title">Для двох <em>або для чотирьох</em></h2>
-      <p class="lead">Ціни з Booking.com на будні, 14–15 жовтня 2026 року, з податками. У разі прямого бронювання ціну на ваші дати підтвердять господарі.</p>
+      <p class="lead">Ціни за ніч у будні. Точну ціну на ваші дати підтвердять господарі.</p>
     </div>
     <div class="rooms__grid">
       <article class="room" data-rv>
         <figure class="room__ph">
           <img src="img/room-oriental.jpg" width="1280" height="854" alt="Мансардний номер Делюкс: ліжко з червоним балдахіном, синя стіна з каліграфією, дерев’яна підлога" loading="lazy" decoding="async">
-          <figcaption>Фото з Booking: Делюкс з 1 ліжком, мансарда в арабському стилі</figcaption>
+          <figcaption>Делюкс з 1 ліжком, мансарда в арабському стилі</figcaption>
         </figure>
         <div class="room__body">
           <h3>Номер Делюкс</h3>
@@ -657,14 +756,14 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
           </ul>
           <div class="room__foot">
             <p class="price"><b>1&nbsp;374&nbsp;грн</b><span>за ніч, 2 гості</span><small>1&nbsp;239&nbsp;грн для одного гостя</small></p>
-            <a class="btn btn--ink" href="#booking" data-room="deluxe">Запитати ці дати <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--ghost" href="#booking" data-room="deluxe">Запитати ці дати <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
       </article>
       <article class="room" data-rv>
         <figure class="room__ph">
           <img src="img/apart-balcony.jpg" width="1280" height="854" alt="Балкон апартаментів: круглий столик і вид на схил каньйону" loading="lazy" decoding="async">
-          <figcaption>Фото з Booking: балкон апартаментів</figcaption>
+          <figcaption>Балкон апартаментів</figcaption>
         </figure>
         <div class="room__body">
           <h3>Апартаменти з балконом</h3>
@@ -682,7 +781,7 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
           </ul>
           <div class="room__foot">
             <p class="price"><b>2&nbsp;574&nbsp;грн</b><span>за ніч, до 4 гостей</span><small>ціна за все помешкання</small></p>
-            <a class="btn btn--ink" href="#booking" data-room="apart">Запитати ці дати <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--ghost" href="#booking" data-room="apart">Запитати ці дати <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
       </article>
@@ -690,13 +789,12 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
     <div class="rooms__note" data-rv>
       <p><svg class="i" aria-hidden="true"><use href="#i-bed"/></svg><span>Додаткове ліжко: 150&nbsp;грн за особу за ніч, якщо є можливість. Дитячих ліжечок немає.</span></p>
       <p><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><span>Заселення з 14:00, виїзд до 12:00.</span></p>
-      <p><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>Склад номерів і ціни: Booking.com, перевірено 26.09.2026.</span></p>
     </div>
   </div>
 </section>
 
-<section class="sec sec--night chan" id="chan" aria-labelledby="chan-title">
-  <svg class="topo" viewBox="0 0 1100 800" aria-hidden="true" focusable="false"><use href="#topo"/></svg>
+<section class="section tone-dark chan" id="chan" aria-labelledby="chan-title">
+  <img class="decor decor--cone" src="decor/cone-top.webp" width="400" height="431" alt="" aria-hidden="true" loading="lazy" decoding="async">
   <div class="wrap">
     <div class="split" data-rv>
       <div>
@@ -729,12 +827,12 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
   </div>
 </section>
 
-<section class="sec sec--night2 gallery" id="gallery" aria-labelledby="gal-title">
+<section class="section tone-sand gallery" id="gallery" aria-labelledby="gal-title">
   <div class="wrap">
-    <div data-rv>
+    <div class="head" data-rv>
       <p class="eyebrow">Фото</p>
       <h2 id="gal-title">Мансарди, сад <em>і сніданок на візку</em></h2>
-      <p class="lead">Знімки з Google-картки будинку і сторінки на Booking.com.</p>
+      <p class="lead">Номери, двір і чан у різні пори року.</p>
     </div>
     <div class="gal" id="gal">
       <button class="w2 h2" type="button" data-cap="Двір навесні надвечір: засклена альтанка з чаном, дрова, вогнище, дерева в цвіту"><img src="img/yard-dusk.jpg" width="1280" height="720" alt="Двір навесні надвечір: альтанка з чаном і вогнище" loading="lazy" decoding="async"></button>
@@ -754,79 +852,99 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
   </div>
 </section>
 
-<section class="sec sec--mist place" id="place" aria-labelledby="place-title">
-  <div class="wrap place__grid">
-    <div data-rv>
-      <p class="eyebrow">Як дістатися</p>
-      <h2 id="place-title">Унизу річка, <em>нагорі Старе місто</em></h2>
-      <p class="lead">Будинок стоїть у каньйоні Смотрича, під Старим містом. До нього близько 900&nbsp;м, частину шляху йти сходами вгору.</p>
-      <blockquote class="quote-s">
-        <p>«Біля старого міста, 10 хвилин пішки, але треба подолати сходи вверх.»</p>
-        <footer>Olena, відгук на Booking.com</footer>
-      </blockquote>
-      <address class="addr">
-        <svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>
-        <span><b>вул. Руська, 3</b><span>Кам’янець-Подільський, Хмельницька обл.</span></span>
-      </address>
-      <div class="btns">
-        <a class="btn btn--ink" href="https://www.google.com/maps/place/data=!4m2!3m1!1s0x4733c78ec6da315d:0xd13bfccdff186033?hl=uk" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-map"/></svg>Відкрити в Google Maps</a>
-        <a class="btn btn--line" href="https://www.google.com/maps/dir/?api=1&amp;destination=48.6797115,26.5710823" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg>Прокласти маршрут</a>
-      </div>
-    </div>
-    <div data-rv>
-      <figure class="canyon">
-        <div class="canyon__stage">
-          <svg viewBox="0 0 640 330" role="img" aria-labelledby="cnT cnD">
-            <title id="cnT">Схема: будинок унизу каньйону біля річки, Старе місто нагорі</title>
-            <desc id="cnD">Від будинку до Старого міста близько 900 метрів, частина шляху сходами вгору. До річки близько 20 метрів.</desc>
-            <defs>
-              <linearGradient id="cnSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6DDCD"/><stop offset=".75" stop-color="#F9FBF9"/></linearGradient>
-            </defs>
-            <rect width="640" height="330" fill="url(#cnSky)"/>
-            <path class="cn-ground" d="M0 96H206C226 98 236 124 246 156C256 188 268 214 286 232C294 240 304 244 318 244H340C348 246 352 254 358 258H434C444 250 454 226 466 196C478 164 492 130 510 116C520 110 540 108 640 108V330H0Z"/>
-            <path class="cn-strata" d="M0 126H198C214 130 222 150 230 176M0 162H214C224 172 232 196 244 220M0 204H236C246 222 256 240 270 252M0 250H270C286 266 300 276 320 280M640 140H548C530 146 518 168 506 196M640 178H556C540 190 530 214 520 240M640 222H566C552 234 540 254 530 272"/>
-            <path class="cn-river" d="M358 258H434C430 266 416 271 396 271S362 266 358 258Z"/>
-            <g class="cn-town">
-              <path d="M34 96V79h22v17zM30 79l15-10 15 10z"/>
-              <path d="M66 96V60h14v36zM64 60l9-24 9 24z"/>
-              <path d="M92 96V74h40v22zM104 74a8 8 0 0 1 16 0z"/>
-              <path d="M140 96V82h26v14zM137 82l16-9 16 9z"/>
-              <path d="M174 96V86h20v10z"/>
-            </g>
-            <path class="cn-cross" d="M112 66v-9M108.5 60.5h7"/>
-            <path class="cn-path" d="M300 236C282 226 270 210 262 192C254 174 250 156 243 136C237 118 230 104 214 98L196 96"/>
-            <path class="cn-lead" d="M150 150L244 146M334 224L352 196"/>
-            <g class="cn-house"><path d="M302 244V228l14-11 14 11v16z"/></g>
-            <rect class="cn-door" x="312" y="233" width="8" height="11"/>
-          </svg>
-          <p class="cn-lab cn-lab--town">Старе місто</p>
-          <p class="cn-lab cn-lab--dist"><em>≈900&nbsp;м</em>частина шляху сходами<small>hotels24.ua і відгуки гостей</small></p>
-          <p class="cn-lab cn-lab--house">Romantic<small>Guest House</small></p>
-          <p class="cn-lab cn-lab--river">річка ≈20&nbsp;м<small>з відгуків</small></p>
-          <p class="cn-lab cn-lab--canyon">каньйон<br>Смотрича</p>
+<section class="section place" id="place" aria-labelledby="place-title">
+  <div class="wrap">
+    <figure class="lp" data-rv>
+      <div class="lp__stage">
+        <img class="lp__bg" src="hero/hero.webp" width="2560" height="1429" alt="Кам’янець-Подільська фортеця надвечір: вежі зі шпилями над кам’яними мурами" loading="lazy" decoding="async">
+        <video class="lp__bg lp__sky" muted loop playsinline disablepictureinpicture preload="none" aria-hidden="true" tabindex="-1"></video>
+        <div class="lp__scrim" aria-hidden="true"></div>
+        <p class="lp__title" aria-hidden="true">Фортеця <span>поруч</span></p>
+        <img class="lp__cut" src="hero/hero-cutout.webp" width="2560" height="1429" alt="" aria-hidden="true" loading="lazy" decoding="async">
+        <div class="lp__shade" aria-hidden="true"></div>
+        <div class="lp__card">
+          <p class="lp__card-t"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Старе місто</p>
+          <p>Близько 900&nbsp;м від будинку, частину шляху сходами вгору. До фортеці машиною 7&nbsp;хвилин.</p>
         </div>
-        <figcaption><span>Схематичний розріз, не в масштабі</span><span>48,67971° пн. ш., 26,57108° сх. д.</span></figcaption>
-      </figure>
-      <ul class="near">
-        <li><svg class="i" aria-hidden="true"><use href="#i-fort"/></svg><span>Старе місто<small>hotels24.ua</small></span><b>≈900&nbsp;м</b></li>
-        <li><svg class="i" aria-hidden="true"><use href="#i-fort"/></svg><span>Фортеця<small>Google, машиною</small></span><b>7&nbsp;хв</b></li>
-        <li><svg class="i" aria-hidden="true"><use href="#i-water"/></svg><span>Річка<small>з відгуків гостей</small></span><b>≈20&nbsp;м</b></li>
-        <li><svg class="i" aria-hidden="true"><use href="#i-coffee"/></svg><span>Два кафе<small>Booking.com</small></span><b>450&nbsp;м</b></li>
-        <li><svg class="i" aria-hidden="true"><use href="#i-coffee"/></svg><span>Кав’ярня<small>Booking.com</small></span><b>650&nbsp;м</b></li>
-        <li><svg class="i" aria-hidden="true"><use href="#i-tree"/></svg><span>НПП «Подільські Товтри»<small>Booking.com</small></span><b>650&nbsp;м</b></li>
-        <li><svg class="i" aria-hidden="true"><use href="#i-bus"/></svg><span>Автовокзал<small>hotels24.ua</small></span><b>≈2,4&nbsp;км</b></li>
-        <li><svg class="i" aria-hidden="true"><use href="#i-train"/></svg><span>Залізничний вокзал<small>Booking.com</small></span><b>3,4&nbsp;км</b></li>
-      </ul>
-      <p class="gnote"><b>З відгуків гостей:</b> кладкою через річку можна перейти до старої вежі з невеликим ресторанчиком.</p>
+        <p class="lp__credit">Фото фортеці: <a href="https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D0%BC%E2%80%99%D1%8F%D0%BD%D0%B5%D1%86%D1%8C-%D0%9F%D0%BE%D0%B4%D1%96%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%B0_%D1%84%D0%BE%D1%80%D1%82%D0%B5%D1%86%D1%8F_%D0%BD%D0%B0%D0%B4%D0%B2%D0%B5%D1%87%D1%96%D1%80.jpg" target="_blank" rel="noopener">Sak Anastasiya / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.uk" target="_blank" rel="noopener license">CC BY-SA 4.0</a>, змінене</p>
+      </div>
+    </figure>
+    <div class="place__grid">
+      <div data-rv>
+        <p class="eyebrow">Як дістатися</p>
+        <h2 id="place-title">Унизу річка, <em>нагорі Старе місто</em></h2>
+        <p class="lead">Будинок стоїть у каньйоні Смотрича, під Старим містом. До нього близько 900&nbsp;м, частину шляху йти сходами вгору.</p>
+        <blockquote class="quote-s">
+          <p>«Біля старого міста, 10 хвилин пішки, але треба подолати сходи вверх.»</p>
+          <footer>Olena, відгук на Booking.com</footer>
+        </blockquote>
+        <address class="addr">
+          <svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>
+          <span><b>вул. Руська, 3</b><span>Кам’янець-Подільський, Хмельницька обл.</span></span>
+        </address>
+        <div class="btns">
+          <a class="btn btn--primary" href="https://www.google.com/maps/place/data=!4m2!3m1!1s0x4733c78ec6da315d:0xd13bfccdff186033?hl=uk" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-map"/></svg>Відкрити в Google Maps</a>
+          <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=48.6797115,26.5710823" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg>Прокласти маршрут</a>
+        </div>
+      </div>
+      <div data-rv>
+        <figure class="canyon">
+          <div class="canyon__stage">
+            <svg viewBox="0 0 640 330" role="img" aria-labelledby="cnT cnD">
+              <title id="cnT">Схема: будинок унизу каньйону біля річки, Старе місто нагорі</title>
+              <desc id="cnD">Від будинку до Старого міста близько 900 метрів, частина шляху сходами вгору. До річки близько 20 метрів.</desc>
+              <defs>
+                <linearGradient id="cnSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EAD5B8"/><stop offset=".75" stop-color="#F6EFE3"/></linearGradient>
+              </defs>
+              <rect width="640" height="330" fill="url(#cnSky)"/>
+              <path class="cn-ground" d="M0 96H206C226 98 236 124 246 156C256 188 268 214 286 232C294 240 304 244 318 244H340C348 246 352 254 358 258H434C444 250 454 226 466 196C478 164 492 130 510 116C520 110 540 108 640 108V330H0Z"/>
+              <path class="cn-strata" d="M0 126H198C214 130 222 150 230 176M0 162H214C224 172 232 196 244 220M0 204H236C246 222 256 240 270 252M0 250H270C286 266 300 276 320 280M640 140H548C530 146 518 168 506 196M640 178H556C540 190 530 214 520 240M640 222H566C552 234 540 254 530 272"/>
+              <path class="cn-river" d="M358 258H434C430 266 416 271 396 271S362 266 358 258Z"/>
+              <g class="cn-town">
+                <path d="M34 96V79h22v17zM30 79l15-10 15 10z"/>
+                <path d="M66 96V60h14v36zM64 60l9-24 9 24z"/>
+                <path d="M92 96V74h40v22zM104 74a8 8 0 0 1 16 0z"/>
+                <path d="M140 96V82h26v14zM137 82l16-9 16 9z"/>
+                <path d="M174 96V86h20v10z"/>
+              </g>
+              <path class="cn-cross" d="M112 66v-9M108.5 60.5h7"/>
+              <path class="cn-path" d="M300 236C282 226 270 210 262 192C254 174 250 156 243 136C237 118 230 104 214 98L196 96"/>
+              <path class="cn-lead" d="M150 150L244 146M334 224L352 196"/>
+              <g class="cn-house"><path d="M302 244V228l14-11 14 11v16z"/></g>
+              <rect class="cn-door" x="312" y="233" width="8" height="11"/>
+            </svg>
+            <p class="cn-lab cn-lab--town">Старе місто</p>
+            <p class="cn-lab cn-lab--dist"><em>≈900&nbsp;м</em>частина шляху сходами<small>hotels24.ua і відгуки гостей</small></p>
+            <p class="cn-lab cn-lab--house">Romantic<small>Guest House</small></p>
+            <p class="cn-lab cn-lab--river">річка ≈20&nbsp;м<small>з відгуків</small></p>
+            <p class="cn-lab cn-lab--canyon">каньйон<br>Смотрича</p>
+          </div>
+          <figcaption><span>Схематичний розріз, не в масштабі</span><span>48,67971° пн. ш., 26,57108° сх. д.</span></figcaption>
+        </figure>
+        <ul class="near">
+          <li><svg class="i" aria-hidden="true"><use href="#i-fort"/></svg><span>Старе місто<small>hotels24.ua</small></span><b>≈900&nbsp;м</b></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-fort"/></svg><span>Фортеця<small>Google, машиною</small></span><b>7&nbsp;хв</b></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-water"/></svg><span>Річка<small>з відгуків гостей</small></span><b>≈20&nbsp;м</b></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-coffee"/></svg><span>Два кафе<small>Booking.com</small></span><b>450&nbsp;м</b></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-coffee"/></svg><span>Кав’ярня<small>Booking.com</small></span><b>650&nbsp;м</b></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-tree"/></svg><span>НПП «Подільські Товтри»<small>Booking.com</small></span><b>650&nbsp;м</b></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-bus"/></svg><span>Автовокзал<small>hotels24.ua</small></span><b>≈2,4&nbsp;км</b></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-train"/></svg><span>Залізничний вокзал<small>Booking.com</small></span><b>3,4&nbsp;км</b></li>
+        </ul>
+        <p class="gnote"><b>З відгуків гостей:</b> кладкою через річку можна перейти до старої вежі з невеликим ресторанчиком.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="sec sec--dusk reviews" id="reviews" aria-labelledby="rev-title">
+<section class="section tone-sand reviews" id="reviews" aria-labelledby="rev-title">
   <div class="wrap">
-    <div data-rv>
-      <p class="eyebrow">Відгуки</p>
-      <h2 id="rev-title">4,9 з 5 у Google <em>за 159 відгуками</em></h2>
+    <div class="head head--medal" data-rv>
+      <div>
+        <p class="eyebrow">Відгуки</p>
+        <h2 id="rev-title">4,9 з 5 у Google <em>за 159 відгуками</em></h2>
+      </div>
+      <span class="medal" aria-hidden="true"><img src="decor/kosiv-bird.webp" width="500" height="381" alt="" loading="lazy" decoding="async"></span>
       <p class="lead">Найчастіше гості хвалять господарів, чан, сніданки і саме місце в каньйоні.</p>
     </div>
     <div class="scores" data-rv>
@@ -872,8 +990,8 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
   </div>
 </section>
 
-<section class="sec sec--night booking" id="booking" aria-labelledby="book-title">
-  <svg class="topo" viewBox="0 0 1100 800" aria-hidden="true" focusable="false"><use href="#topo"/></svg>
+<div class="lizhnyk" aria-hidden="true"></div>
+<section class="section tone-dark booking" id="booking" aria-labelledby="book-title">
   <div class="wrap booking__grid">
     <div data-rv>
       <p class="eyebrow">Бронювання</p>
@@ -884,8 +1002,12 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
         <p><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><span>Заселення з 14:00, виїзд до 12:00</span></p>
         <p><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span>вул. Руська, 3, Кам’янець-Подільський</span></p>
       </div>
+      <div class="still" aria-hidden="true">
+        <img class="c1" src="decor/cone-side.webp" width="400" height="182" alt="" loading="lazy" decoding="async">
+        <img class="c2" src="decor/cone-angle.webp" width="400" height="224" alt="" loading="lazy" decoding="async">
+      </div>
     </div>
-    <div data-rv>
+    <div class="formcard" data-rv>
       <form class="form" id="bookForm" method="post" action="#" novalidate>
         <div class="row2 row2--keep">
           <label class="fld"><span class="lbl">Заїзд</span><input class="inp" type="date" name="checkin" id="fIn" required></label>
@@ -923,7 +1045,7 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
         </fieldset>
         <label class="fld"><span class="lbl">Коментар, якщо потрібно</span><textarea class="inp" name="comment" id="fComment" rows="3" placeholder="Сніданки, додаткове ліжко, приблизний час приїзду"></textarea></label>
         <p class="form__err" id="fErr" role="alert" aria-live="assertive"></p>
-        <button class="btn btn--ember" type="submit" id="fSubmit" disabled>Надіслати заявку <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <button class="btn btn--primary" type="submit" id="fSubmit" disabled>Надіслати заявку <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
         <p class="form__fine">Номер телефону потрібен лише для відповіді на заявку.</p>
       </form>
       <div class="done" id="done" hidden>
@@ -932,17 +1054,18 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
         <p>Це прототип, тож заявку нікуди не надіслано. На готовому сайті вона одразу прийде господарям у месенджер. Ось так її побачать:</p>
         <p class="bubble__h"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg>Повідомлення для господарів</p>
         <div class="bubble" id="bubble"></div>
-        <button class="btn btn--glass" type="button" id="doneBack">Змінити заявку</button>
+        <button class="btn btn--ghost" type="button" id="doneBack">Змінити заявку</button>
       </div>
     </div>
   </div>
 </section>
 
-<section class="sec sec--mist faq-sec" id="faq" aria-labelledby="faq-title">
+<section class="section faq-sec" id="faq" aria-labelledby="faq-title">
   <div class="wrap faq__grid">
-    <div data-rv>
+    <div class="head" data-rv>
       <p class="eyebrow">Питання</p>
       <h2 id="faq-title">Що питають <em>перед приїздом</em></h2>
+      <img class="faq__sprig" src="decor/sprig.webp" width="560" height="734" alt="" aria-hidden="true" loading="lazy" decoding="async">
     </div>
     <div class="faq" data-rv>
       <details>
@@ -979,6 +1102,7 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
 
 </main>
 
+<div class="lizhnyk" aria-hidden="true"></div>
 <footer class="foot">
   <div class="wrap">
     <p class="foot__brand">Romantic<span>Guest House · Кам’янець‑Подільський</span></p>
@@ -1008,7 +1132,8 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
       </div>
     </div>
     <div class="foot__credits">
-      <p>Фото фортеці на першому екрані: Sak Anastasiya, <a href="https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D0%BC%E2%80%99%D1%8F%D0%BD%D0%B5%D1%86%D1%8C-%D0%9F%D0%BE%D0%B4%D1%96%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%B0_%D1%84%D0%BE%D1%80%D1%82%D0%B5%D1%86%D1%8F_%D0%BD%D0%B0%D0%B4%D0%B2%D0%B5%D1%87%D1%96%D1%80.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, ліцензія <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.uk" target="_blank" rel="noopener license">CC BY-SA 4.0</a>. Змінено: кадрування, колір, вирізане небо, анімоване небо.</p>
+      <p>Фото фортеці в розділі «Як дістатися»: Sak Anastasiya, <a href="https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D0%BC%E2%80%99%D1%8F%D0%BD%D0%B5%D1%86%D1%8C-%D0%9F%D0%BE%D0%B4%D1%96%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%B0_%D1%84%D0%BE%D1%80%D1%82%D0%B5%D1%86%D1%8F_%D0%BD%D0%B0%D0%B4%D0%B2%D0%B5%D1%87%D1%96%D1%80.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, ліцензія <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.uk" target="_blank" rel="noopener license">CC BY-SA 4.0</a>. Змінено: кадрування, колір, вирізане небо, анімоване небо.</p>
+      <p>Настроєве відео на першому екрані зібране для прототипу.</p>
       <p>Фото будинку і номерів: Google-картка «Romantic Guest House» і сторінка будинку на Booking.com.</p>
       <p>Рейтинги й цитати: Google Maps, Booking.com, hotels24.ua, станом на 26.09.2026.</p>
       <p>Прототип сайту, зібраний за відкритими даними. Це не офіційний сайт гостьового дому.</p>
@@ -1017,14 +1142,14 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
 </footer>
 
 <div class="mbar" id="mbar">
-  <div class="mbar__txt"><b>Делюкс: 1&nbsp;374&nbsp;грн за ніч</b><small>для двох, ціна Booking на будні</small></div>
+  <div class="mbar__txt"><b>Делюкс: 1&nbsp;374&nbsp;грн за ніч</b><small>для двох, будні</small></div>
   <a class="mbar__call" href="tel:+380965145678" aria-label="Подзвонити: +380 96 514 5678"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></a>
-  <a class="btn btn--ember" href="#booking">Заявка</a>
+  <a class="btn btn--primary" href="#booking">Заявка</a>
 </div>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Перегляд фото" hidden>
   <p class="lb__count" id="lbCount"></p>
-  <figure class="lb__fig"><img id="lbImg" src="img/yard-dusk.jpg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <figure class="lb__fig"><img id="lbImg" src="img/yard-dusk.jpg" alt="" loading="lazy" decoding="async"><figcaption id="lbCap"></figcaption></figure>
   <button class="lb__btn lb__close" type="button" id="lbClose" aria-label="Закрити"><svg class="i" aria-hidden="true"><use href="#i-close"/></svg></button>
   <button class="lb__btn lb__prev" type="button" id="lbPrev" aria-label="Попереднє фото"><svg class="i" aria-hidden="true"><use href="#i-left"/></svg></button>
   <button class="lb__btn lb__next" type="button" id="lbNext" aria-label="Наступне фото"><svg class="i" aria-hidden="true"><use href="#i-right"/></svg></button>
@@ -1034,108 +1159,131 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
 (function(){
   'use strict';
   var d = document, root = d.documentElement;
-  root.classList.add('js');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var saveData = !!(navigator.connection && navigator.connection.saveData);
-  var small = window.matchMedia('(max-width: 1000px)');
-  var desk = window.matchMedia('(min-width: 1001px)');
+  var calm = reduce.matches || !!(navigator.connection && navigator.connection.saveData);
+  var io = 'IntersectionObserver' in window;
+  function on(mq, fn){ if (mq.addEventListener) mq.addEventListener('change', fn); else if (mq.addListener) mq.addListener(fn); }
 
-  var strip = d.getElementById('strip');
-  var stripH = strip.offsetHeight;
-  function setStrip(){ stripH = strip.offsetHeight; root.style.setProperty('--strip', stripH + 'px'); }
-  setStrip();
-  if ('ResizeObserver' in window) new ResizeObserver(setStrip).observe(strip);
-  else window.addEventListener('resize', setStrip);
+  var header = d.getElementById('header');
+  function hdr(){ header.classList.toggle('is-scrolled', (window.pageYOffset || root.scrollTop || 0) > 8); }
+  hdr(); window.addEventListener('scroll', hdr, { passive: true });
 
-  var hero = d.getElementById('top');
-  var plates = [hero.querySelector('.plate--bg img'), hero.querySelector('.plate--cut img')];
-  var pending = plates.length;
-  function heroReady(){ hero.classList.add('is-ready'); }
-  function onPlate(){ if (--pending <= 0) heroReady(); }
-  plates.forEach(function(im){
-    if (!im || (im.complete && im.naturalWidth)) { onPlate(); return; }
-    im.addEventListener('load', onPlate, { once: true });
-    im.addEventListener('error', heroReady, { once: true });
+  var menuBtn = d.getElementById('menuBtn'), menu = d.getElementById('menu');
+  function closeMenu(){ menu.hidden = true; menuBtn.setAttribute('aria-expanded', 'false'); }
+  menuBtn.addEventListener('click', function(){
+    var open = menuBtn.getAttribute('aria-expanded') === 'true';
+    menuBtn.setAttribute('aria-expanded', String(!open));
+    menu.hidden = open;
   });
-  setTimeout(heroReady, 4000);
+  [].forEach.call(menu.querySelectorAll('a'), function(a){ a.addEventListener('click', closeMenu); });
+  d.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !menu.hidden) { closeMenu(); menuBtn.focus(); } });
 
-  var heroIn = true;
-
-  (function sky(){
-    var v = hero.querySelector('.plate--sky');
-    if (!v) return;
-    if (reduce.matches || saveData) { v.parentNode.removeChild(v); return; }
+  function ambient(v, pick, opts){
+    opts = opts || {};
+    var near = false, cur = '', userPaused = false;
     v.muted = true; v.defaultMuted = true; v.setAttribute('muted', '');
     v.playsInline = true; v.setAttribute('playsinline', '');
-    var cur = '';
-    function pick(){ return small.matches ? 'hero/hero-sky-720.mp4' : 'hero/hero-sky.mp4'; }
+    function load(){
+      var s = pick();
+      if (s.src !== cur) { cur = s.src; if (s.poster) v.poster = s.poster; v.src = cur; v.load(); }
+    }
     function play(){
-      if (!heroIn) return;
-      if (!cur) { cur = pick(); v.src = cur; }
-      v.muted = true;
-      var p = v.play();
-      if (p && p.catch) p.catch(function(){});
+      if (!near || userPaused) return;
+      if (!cur) load();
+      v.muted = true; v.defaultMuted = true;
+      var p = v.play(); if (p && p.catch) p.catch(function(){});
     }
-    v.addEventListener('playing', function(){ v.classList.add('is-on'); });
     v.addEventListener('canplay', play);
-    var swap = function(){
-      var next = pick();
-      if (cur && next !== cur) { cur = next; v.classList.remove('is-on'); v.src = cur; v.load(); play(); }
-    };
-    if (small.addEventListener) small.addEventListener('change', swap); else if (small.addListener) small.addListener(swap);
-    if ('IntersectionObserver' in window) {
+    v.addEventListener('playing', function(){ if (opts.onPlaying) opts.onPlaying(); });
+    if (opts.mq) on(opts.mq, function(){ if (cur) { if (opts.onSwap) opts.onSwap(); load(); play(); } });
+    if (io) {
       new IntersectionObserver(function(en){
-        if (en[en.length - 1].isIntersecting) play(); else if (!v.paused) v.pause();
-      }).observe(hero);
-    }
+        near = en[en.length - 1].isIntersecting;
+        if (near) play(); else if (!v.paused) v.pause();
+      }, { rootMargin: opts.margin || '0px' }).observe(opts.watch || v);
+    } else { near = true; }
     ['touchstart', 'pointerdown', 'scroll', 'keydown'].forEach(function(ev){
-      window.addEventListener(ev, function(){ if (heroIn && v.paused) play(); }, { once: true, passive: true });
+      window.addEventListener(ev, function(){ if (near && v.paused) play(); }, { once: true, passive: true });
     });
-    play();
+    d.addEventListener('visibilitychange', function(){ if (!d.hidden && v.paused) play(); });
+    if (opts.eager) { near = true; play(); }
+    return {
+      pause: function(){ userPaused = true; v.pause(); },
+      resume: function(){ userPaused = false; play(); }
+    };
+  }
+
+  (function band(){
+    var box = d.getElementById('band'), v = d.getElementById('bandVideo'), btn = d.getElementById('bandPause');
+    if (!v) return;
+    if (calm) {
+      v.parentNode.removeChild(v);
+      var note = d.querySelector('.band__note span');
+      if (note) note.textContent = 'Настроєве фото зібране для прототипу. У робочій версії тут будуть ваші фото й відео.';
+      return;
+    }
+    var mob = window.matchMedia('(max-width: 760px)');
+    var ctl = ambient(v, function(){
+      return mob.matches
+        ? { src: 'hero-karpaty/hero_mobile_750x990.mp4', poster: 'hero-karpaty/poster_mobile_750x990.jpg' }
+        : { src: 'hero-karpaty/hero_desktop_1440x462.mp4', poster: 'hero-karpaty/poster_desktop_1440x462.jpg' };
+    }, {
+      mq: mob, watch: box, eager: true,
+      onPlaying: function(){ box.classList.add('is-playing'); btn.hidden = false; },
+      onSwap: function(){ box.classList.remove('is-playing'); }
+    });
+    btn.addEventListener('click', function(){
+      var paused = btn.getAttribute('aria-pressed') === 'true';
+      if (paused) { ctl.resume(); btn.setAttribute('aria-pressed', 'false'); btn.setAttribute('aria-label', 'Зупинити відео'); }
+      else { ctl.pause(); btn.setAttribute('aria-pressed', 'true'); btn.setAttribute('aria-label', 'Відтворити відео'); }
+    });
   })();
 
-  var nav = d.getElementById('nav');
-  var title = hero.querySelector('.hero__title');
-  var movers = hero.querySelectorAll('.plate');
-  var ticking = false;
-  function frame(){
-    ticking = false;
-    var y = window.pageYOffset || root.scrollTop || 0;
-    if (desk.matches) { nav.style.setProperty('--navY', Math.max(12, stripH + 12 - y) + 'px'); nav.classList.toggle('is-solid', y > 80); }
-    if (reduce.matches) return;
-    var hh = hero.offsetHeight + stripH;
-    if (y > hh) y = hh;
-    var p = 'translate3d(0,' + (y * 0.16).toFixed(1) + 'px,0)';
-    for (var i = 0; i < movers.length; i++) movers[i].style.transform = p;
-    title.style.transform = 'translate3d(0,' + (y * 0.42).toFixed(1) + 'px,0)';
-  }
-  window.addEventListener('scroll', function(){ if (!ticking) { ticking = true; window.requestAnimationFrame(frame); } }, { passive: true });
-  window.addEventListener('resize', frame);
-  frame();
+  (function panel(){
+    var lp = d.querySelector('.lp');
+    if (!lp) return;
+    var sky = lp.querySelector('.lp__sky');
+    if (sky) {
+      if (calm) sky.parentNode.removeChild(sky);
+      else {
+        var small = window.matchMedia('(max-width: 760px)');
+        ambient(sky, function(){ return { src: small.matches ? 'hero/hero-sky-720.mp4' : 'hero/hero-sky.mp4' }; }, {
+          mq: small, watch: lp, margin: '240px 0px',
+          onPlaying: function(){ sky.classList.add('is-on'); },
+          onSwap: function(){ sky.classList.remove('is-on'); }
+        });
+      }
+    }
+    var plates = [lp.querySelector('.lp__bg'), lp.querySelector('.lp__cut')], left = plates.length;
+    function ready(){ if (--left <= 0) lp.classList.add('is-ready'); }
+    plates.forEach(function(im){
+      if (!im || (im.complete && im.naturalWidth)) { ready(); return; }
+      im.addEventListener('load', ready, { once: true });
+      im.addEventListener('error', function(){ left = 0; lp.classList.add('is-ready'); }, { once: true });
+    });
+  })();
 
-  var links = nav.querySelector('.nav__links');
-  function linksMore(){ links.classList.toggle('is-more', links.scrollLeft + links.clientWidth < links.scrollWidth - 4); }
-  links.addEventListener('scroll', linksMore, { passive: true });
-  window.addEventListener('resize', linksMore);
-  if (d.fonts && d.fonts.ready) d.fonts.ready.then(linksMore);
-  linksMore();
-
-  var mbar = d.getElementById('mbar'), book = d.getElementById('booking');
-  var bookIn = false;
-  function updBar(){ mbar.classList.toggle('is-on', !heroIn && !bookIn); }
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(function(en){ heroIn = en[en.length - 1].isIntersecting; updBar(); }).observe(hero);
-    new IntersectionObserver(function(en){ bookIn = en[en.length - 1].isIntersecting; updBar(); }, { rootMargin: '0px 0px -30% 0px' }).observe(book);
+  var mbar = d.getElementById('mbar');
+  var heroIn = true, bookIn = false;
+  function updBar(){
+    var show = !heroIn && !bookIn;
+    mbar.classList.toggle('is-on', show);
+    if (show) mbar.removeAttribute('inert'); else mbar.setAttribute('inert', '');
   }
+  updBar();
+  if (io) {
+    new IntersectionObserver(function(en){ heroIn = en[en.length - 1].isIntersecting; updBar(); }, { rootMargin: '-72px 0px 0px 0px' }).observe(d.getElementById('top'));
+    new IntersectionObserver(function(en){ bookIn = en[en.length - 1].isIntersecting; updBar(); }, { rootMargin: '-72px 0px -30% 0px' }).observe(d.getElementById('booking'));
+  } else { heroIn = false; updBar(); }
 
   var rv = d.querySelectorAll('[data-rv]');
-  if ('IntersectionObserver' in window && !reduce.matches) {
-    var io = new IntersectionObserver(function(en){
-      en.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  if (io && !reduce.matches) {
+    var rio = new IntersectionObserver(function(en){
+      en.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('is-in'); rio.unobserve(e.target); } });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
-    rv.forEach(function(el){ io.observe(el); });
+    [].forEach.call(rv, function(el){ rio.observe(el); });
   } else {
-    rv.forEach(function(el){ el.classList.add('is-in'); });
+    [].forEach.call(rv, function(el){ el.classList.add('is-in'); });
   }
 
   (function lightbox(){
@@ -1218,7 +1366,11 @@ textarea.inp{min-height:92px;padding:14px 16px;line-height:1.5;resize:vertical}
       });
     });
     [].forEach.call(d.querySelectorAll('[data-room]'), function(a){
-      a.addEventListener('click', function(){ room.value = a.getAttribute('data-room'); if (a.getAttribute('data-room') === 'apart' && (parseInt(g.value, 10) || 0) < 3) g.value = 4; });
+      a.addEventListener('click', function(){
+        room.value = a.getAttribute('data-room');
+        if (a.getAttribute('data-room') === 'apart' && (parseInt(g.value, 10) || 0) < 3) g.value = 4;
+        if (f.hidden) { done.hidden = true; f.hidden = false; }
+      });
     });
     [nm, ph].forEach(function(el){ el.addEventListener('input', function(){ el.removeAttribute('aria-invalid'); }); });
     f.addEventListener('submit', function(e){
