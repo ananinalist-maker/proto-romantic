@@ -471,8 +471,6 @@ h3{font:500 clamp(24px,1.2vw + 16px,30px)/1.1 var(--f-serif)}
 .inp::placeholder{color:#8E7B64}
 .inp:focus{outline:none;border-color:var(--cognac);box-shadow:0 0 0 4px rgba(122,78,37,.15)}
 .inp[aria-invalid="true"]{border-color:#A3261C;box-shadow:0 0 0 3px rgba(163,38,28,.12)}
-input[type="date"].inp{display:block;padding-right:8px}
-input[type="date"].inp::-webkit-date-and-time-value{text-align:left}
 select.inp{padding-right:42px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%237A4E25' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
 textarea.inp{height:auto;min-height:96px;padding:13px 14px;line-height:1.45;resize:vertical}
 .stepper{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;height:52px;padding:3px;border:1px solid var(--seam-strong);border-radius:var(--r-sm);background:var(--paper)}
@@ -508,6 +506,53 @@ textarea.inp{height:auto;min-height:96px;padding:13px 14px;line-height:1.45;resi
 .bubble__h .i{width:16px;height:16px}
 .bubble{margin-top:20px;padding:14px 16px;border-radius:16px 16px 16px 4px;background:#fff;border:1px solid #CAD6DE;box-shadow:0 0 0 10px #DCE6EC;font:400 14.5px/1.55 var(--f-sans);white-space:pre-line;overflow-wrap:anywhere}
 .done .btn{width:100%;margin-top:24px}
+
+/* календар вільних дат у формі (демо) */
+.cal__demo{display:grid;justify-items:start;gap:10px;padding:14px 16px 15px;border-radius:var(--r-sm);border:1px dashed var(--seam-strong);background:rgba(239,229,211,.5);font-size:13.5px;line-height:1.45;color:var(--bark)}
+.cal__demo .done__tag{margin:0}
+.done .cal__demo{margin-top:22px;font-size:13.5px}
+.cal{display:grid;gap:8px;min-width:0}
+.cal__panel{position:relative;padding:8px 8px 12px;border:1px solid var(--seam-strong);border-radius:var(--r-sm);background:var(--paper);transition:border-color .15s,box-shadow .15s}
+.cal.is-invalid .cal__panel{border-color:#A3261C;box-shadow:0 0 0 3px rgba(163,38,28,.12)}
+.cal__nav{position:absolute;z-index:1;top:8px;width:40px;height:40px;border-color:var(--seam);background:var(--paper);transition:background-color .15s,border-color .15s,opacity .15s}
+.cal__nav--prev{left:8px}
+.cal__nav--next{right:8px}
+.cal__nav .i{width:18px;height:18px}
+.cal__nav:disabled{opacity:.3;cursor:default}
+@media (hover:hover){ .cal__nav:not(:disabled):hover{background:var(--wool);border-color:var(--ink)} }
+.cal__months{display:grid;grid-template-columns:repeat(var(--n,1),minmax(0,1fr));gap:20px}
+.cal__t{display:flex;align-items:center;justify-content:center;height:40px;font:500 23px/1 var(--f-serif);font-variant-numeric:lining-nums;letter-spacing:.005em}
+.cal__g{width:100%;margin-top:4px;border-collapse:collapse;table-layout:fixed}
+.cal__g th{padding:6px 0 7px;font:800 10.5px/1 var(--f-sans);letter-spacing:.12em;text-transform:uppercase;text-align:center;color:var(--note)}
+.cal__g td{height:42px;padding:1px 0}
+.cal__d{position:relative;display:block;width:100%;height:40px;padding:0;border:0;border-radius:var(--r-sm);background:transparent;color:var(--ink);font:600 15px/40px var(--f-sans);font-variant-numeric:tabular-nums lining-nums;text-align:center;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background-color .12s,color .12s}
+.cal__d span{position:relative}
+.formcard .cal__d:focus-visible{outline:2px solid var(--cognac);outline-offset:-2px}
+@media (hover:hover){ .cal__d:not([aria-disabled="true"]):hover{background:var(--wool);box-shadow:inset 0 0 0 1px var(--seam-strong)} }
+.cal__d[aria-disabled="true"]{cursor:default}
+.cal__d.is-past,.cal__d.is-min,.cal__d.is-nout{color:var(--fog)}
+.cal__d.is-range,.cal__d.is-preview{border-radius:0;background:rgba(36,49,36,.1)}
+.cal__d.is-busy{color:#A08A70;cursor:not-allowed;background:repeating-linear-gradient(135deg,rgba(154,130,100,.17) 0 3px,rgba(154,130,100,0) 3px 7px)}
+.cal__d.is-busy span{text-decoration:line-through;text-decoration-color:var(--cognac);text-decoration-thickness:1.5px}
+.cal__d.is-start,.cal__d.is-end{background:var(--spruce);color:var(--wool)}
+.cal__d.is-start.is-joined{border-radius:var(--r-sm) 0 0 var(--r-sm)}
+.cal__d.is-end{border-radius:0 var(--r-sm) var(--r-sm) 0}
+@media (hover:hover){ .cal__d.is-start:hover,.cal__d.is-end:hover{background:var(--spruce);box-shadow:none} }
+.cal__d.is-today span::after{content:"";position:absolute;left:50%;bottom:-6px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--cognac)}
+.cal__d.is-start.is-today span::after,.cal__d.is-end.is-today span::after{background:var(--candle)}
+.cal__legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:8px;padding:10px 4px 0;border-top:1px solid var(--seam);font:600 12.5px/1.2 var(--f-sans);color:var(--bark)}
+.cal__legend li{display:inline-flex;align-items:center;gap:8px}
+.cal__sw{display:inline-block;width:28px;height:22px;border-radius:3px;border:1px solid var(--seam);background:var(--paper);font:600 12px/20px var(--f-sans);font-variant-numeric:lining-nums;text-align:center;color:var(--ink)}
+.cal__sw--busy{border-color:transparent;background:repeating-linear-gradient(135deg,rgba(154,130,100,.22) 0 3px,rgba(154,130,100,0) 3px 7px);color:#A08A70}
+.cal__sw--busy span{text-decoration:line-through;text-decoration-color:var(--cognac)}
+.cal__sw--sel{border-color:var(--spruce);background:var(--spruce);color:var(--wool)}
+.cal__foot{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:2px 14px}
+.cal__sum{flex:1 1 220px;min-width:0;padding-top:4px;font:700 14.5px/1.45 var(--f-sans);font-variant-numeric:lining-nums;color:var(--ink)}
+.cal__sum small{display:block;margin-top:2px;font-weight:400;font-size:13.5px;color:var(--bark)}
+.cal__hint{display:block;margin-bottom:2px;font-size:13.5px;color:#8C3A17}
+.cal__reset{flex:none;min-height:36px;padding:0;border:0;background:none;font:700 13px/1.2 var(--f-sans);color:var(--cognac);text-decoration:underline;text-decoration-color:rgba(122,78,37,.4);text-underline-offset:3px;cursor:pointer}
+.cal__reset:hover{text-decoration-color:currentColor}
+@media (max-width:360px){ .cal__t{font-size:21px} .cal__d{font-size:14px} }
 
 /* питання */
 .faq__sprig{display:none}
@@ -575,7 +620,6 @@ textarea.inp{height:auto;min-height:96px;padding:13px 14px;line-height:1.45;resi
   .seasons li{scroll-snap-align:start}
   .gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px;gap:8px}
   .rooms__grid .room__foot .btn{width:100%}
-  input[type="date"].inp{padding:0 8px 0 12px}
   .ans{padding-right:0}
   .cn-lab{font-size:11px}
   .cn-lab small{font-size:10.5px}
@@ -586,9 +630,6 @@ textarea.inp{height:auto;min-height:96px;padding:13px 14px;line-height:1.45;resi
   .lb__prev{left:calc(50% - 58px)}
   .lb__next{right:calc(50% - 58px)}
   .lb{padding-bottom:84px}
-}
-@media (max-width:760px) and (pointer:coarse){
-  input[type="date"].inp::-webkit-calendar-picker-indicator{display:none}
 }
 @media (max-width:380px){
   .cn-lab small{display:none}
@@ -1016,7 +1057,7 @@ textarea.inp{height:auto;min-height:96px;padding:13px 14px;line-height:1.45;resi
   <div class="wrap booking__grid">
     <div data-rv>
       <p class="eyebrow">Бронювання</p>
-      <h2 id="book-title">Напишіть дати, <em>господарі зв’яжуться з вами</em></h2>
+      <h2 id="book-title">Оберіть вільні дати, <em>господарі зв’яжуться з вами</em></h2>
       <p class="lead">Заповнення займе хвилину. Про сніданки, додаткове ліжко чи час приїзду напишіть у коментарі.</p>
       <div class="contact">
         <a class="contact__phone" href="tel:+380965145678"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>+380 96 514 5678</a>
@@ -1030,9 +1071,36 @@ textarea.inp{height:auto;min-height:96px;padding:13px 14px;line-height:1.45;resi
     </div>
     <div class="formcard" data-rv>
       <form class="form" id="bookForm" method="post" action="#" novalidate>
-        <div class="row2 row2--keep">
-          <label class="fld"><span class="lbl">Заїзд</span><input class="inp" type="date" name="checkin" id="fIn" required></label>
-          <label class="fld"><span class="lbl">Виїзд</span><input class="inp" type="date" name="checkout" id="fOut" required></label>
+        <div class="cal__demo" role="note">
+          <p class="done__tag"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Демо календаря</p>
+          <p>Зайняті дати тут умовні. У робочій версії календар кожні 15 хвилин сам підтягуватиме зайнятість ваших номерів з Booking і Airbnb.</p>
+        </div>
+        <fieldset class="seg">
+          <legend>Номер</legend>
+          <div class="seg__row">
+            <label><input type="radio" name="room" value="any" checked><span>Будь-який вільний</span></label>
+            <label><input type="radio" name="room" value="deluxe"><span>Делюкс</span></label>
+            <label><input type="radio" name="room" value="apart"><span>Апартаменти</span></label>
+          </div>
+        </fieldset>
+        <div class="cal" id="cal">
+          <p class="lbl" id="calLbl">Заїзд і виїзд</p>
+          <div class="cal__panel">
+            <button class="icon-btn cal__nav cal__nav--prev" type="button" id="calPrev" aria-label="Попередній місяць"><svg class="i" aria-hidden="true"><use href="#i-left"/></svg></button>
+            <button class="icon-btn cal__nav cal__nav--next" type="button" id="calNext" aria-label="Наступний місяць"><svg class="i" aria-hidden="true"><use href="#i-right"/></svg></button>
+            <div class="cal__months" id="calMonths" role="group" aria-labelledby="calLbl"></div>
+            <ul class="cal__legend">
+              <li><span class="cal__sw" aria-hidden="true"><span>9</span></span>Вільно</li>
+              <li><span class="cal__sw cal__sw--busy" aria-hidden="true"><span>9</span></span>Зайнято</li>
+              <li><span class="cal__sw cal__sw--sel" aria-hidden="true"><span>9</span></span>Ваші дати</li>
+            </ul>
+          </div>
+          <div class="cal__foot">
+            <p class="cal__sum" id="calSum" aria-live="polite">Оберіть дату заїзду.</p>
+            <button class="cal__reset" type="button" id="calReset" hidden>Скинути дати</button>
+          </div>
+          <input type="hidden" name="checkin" id="fIn">
+          <input type="hidden" name="checkout" id="fOut">
         </div>
         <div class="row2">
           <div class="fld">
@@ -1043,13 +1111,6 @@ textarea.inp{height:auto;min-height:96px;padding:13px 14px;line-height:1.45;resi
               <button type="button" data-step="1" aria-label="Більше гостей">+</button>
             </div>
           </div>
-          <label class="fld"><span class="lbl">Номер</span>
-            <select class="inp" name="room" id="fRoom">
-              <option value="any">Будь-який вільний</option>
-              <option value="deluxe">Номер Делюкс, 25 м²</option>
-              <option value="apart">Апартаменти з балконом, 59 м²</option>
-            </select>
-          </label>
         </div>
         <label class="check"><input type="checkbox" name="chan" id="fChan"><span>Хочемо чан на один із вечорів<small>Чан оплачується окремо, господарі скажуть вільний час і ціну.</small></span></label>
         <div class="row2">
@@ -1071,10 +1132,11 @@ textarea.inp{height:auto;min-height:96px;padding:13px 14px;line-height:1.45;resi
       </form>
       <div class="done" id="done" hidden>
         <p class="done__tag"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Прототип</p>
-        <h3 id="doneTitle" tabindex="-1">Заявку сформовано</h3>
-        <p>Це прототип, тож заявку нікуди не надіслано. На готовому сайті вона одразу прийде господарям у месенджер. Ось так її побачать:</p>
-        <p class="bubble__h"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg>Повідомлення для господарів</p>
+        <h3 id="doneTitle" tabindex="-1">Так виглядатиме заявка у вашому Telegram</h3>
+        <p>Це демо, тож заявку нікуди не надіслано. У робочій версії сайт перед відправкою ще раз перевірить, чи дати досі вільні, і заявка одразу прийде вам.</p>
+        <p class="bubble__h"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg>Telegram</p>
         <div class="bubble" id="bubble"></div>
+        <p class="cal__demo">Далі ви закриваєте ці дати на Booking і Airbnb і підтверджуєте гостю. Сайт це підхопить сам.</p>
         <button class="btn btn--ghost" type="button" id="doneBack">Змінити заявку</button>
       </div>
     </div>
@@ -1176,6 +1238,8 @@ textarea.inp{height:auto;min-height:96px;padding:13px 14px;line-height:1.45;resi
   <button class="lb__btn lb__next" type="button" id="lbNext" aria-label="Наступне фото"><svg class="i" aria-hidden="true"><use href="#i-right"/></svg></button>
 </div>
 
+<!-- Умовна зайнятість для демо, копія demo-availability.json: якщо файл не завантажиться, календар візьме її -->
+<script type="application/json" id="demoAvail">{"updated_at":"2026-09-27T10:30:00+03:00","source":"demo","rooms":{"deluxe":{"busy":[["2026-09-25","2026-09-28"],["2026-10-02","2026-10-04"],["2026-10-05","2026-10-07"],["2026-10-09","2026-10-11"],["2026-10-11","2026-10-13"],["2026-10-16","2026-10-19"],["2026-10-23","2026-10-25"],["2026-10-30","2026-11-02"],["2026-11-03","2026-11-05"],["2026-11-06","2026-11-08"],["2026-11-13","2026-11-15"],["2026-11-19","2026-11-22"],["2026-11-27","2026-11-29"]]},"apart":{"busy":[["2026-10-03","2026-10-05"],["2026-10-09","2026-10-12"],["2026-10-15","2026-10-18"],["2026-10-20","2026-10-22"],["2026-10-23","2026-10-25"],["2026-10-30","2026-11-01"],["2026-11-06","2026-11-09"],["2026-11-14","2026-11-16"],["2026-11-20","2026-11-22"],["2026-11-27","2026-11-30"]]}}}</script>
 <script>
 (function(){
   'use strict';
@@ -1366,25 +1430,338 @@ textarea.inp{height:auto;min-height:96px;padding:13px 14px;line-height:1.45;resi
   (function form(){
     var f = d.getElementById('bookForm');
     var fin = d.getElementById('fIn'), fout = d.getElementById('fOut'), g = d.getElementById('fGuests');
-    var room = d.getElementById('fRoom'), chan = d.getElementById('fChan');
+    var chan = d.getElementById('fChan');
     var nm = d.getElementById('fName'), ph = d.getElementById('fPhone'), cm = d.getElementById('fComment');
     var err = d.getElementById('fErr'), done = d.getElementById('done'), bubble = d.getElementById('bubble');
-    d.getElementById('fSubmit').disabled = false;
+    var submit = d.getElementById('fSubmit');
+    var cal = d.getElementById('cal'), months = d.getElementById('calMonths'), sumEl = d.getElementById('calSum');
+    var prevBtn = d.getElementById('calPrev'), nextBtn = d.getElementById('calNext'), resetBtn = d.getElementById('calReset');
+    var radios = [].slice.call(f.querySelectorAll('input[name="room"]'));
+    submit.disabled = false;
+
     function pad(n){ return (n < 10 ? '0' : '') + n; }
     function iso(t){ return t.getFullYear() + '-' + pad(t.getMonth() + 1) + '-' + pad(t.getDate()); }
     function parse(s){ var p = s.split('-'); return new Date(+p[0], +p[1] - 1, +p[2], 12); }
     function human(s){ var t = parse(s); return pad(t.getDate()) + '.' + pad(t.getMonth() + 1) + '.' + t.getFullYear(); }
     function nights(n){ var a = n % 10, b = n % 100; if (a === 1 && b !== 11) return n + ' ніч'; if (a >= 2 && a <= 4 && (b < 12 || b > 14)) return n + ' ночі'; return n + ' ночей'; }
-    var today = new Date(); today.setHours(12, 0, 0, 0);
-    var tomorrow = new Date(today.getTime()); tomorrow.setDate(tomorrow.getDate() + 1);
-    fin.min = iso(today); fout.min = iso(tomorrow);
-    fin.addEventListener('change', function(){
-      if (!fin.value) return;
-      var n = parse(fin.value); n.setDate(n.getDate() + 1);
-      fout.min = iso(n);
-      if (!fout.value || fout.value <= fin.value) fout.value = iso(n);
-      fin.removeAttribute('aria-invalid'); fout.removeAttribute('aria-invalid');
+    function add(t, n){ var r = new Date(t.getFullYear(), t.getMonth(), t.getDate() + n, 12); return r; }
+    function addMonths(t, k){ var y = t.getFullYear(), m = t.getMonth() + k, last = new Date(y, m + 1, 0).getDate(); return new Date(y, m, Math.min(t.getDate(), last), 12); }
+    function mStart(t){ return new Date(t.getFullYear(), t.getMonth(), 1, 12); }
+    function mIdx(t){ return t.getFullYear() * 12 + t.getMonth(); }
+    function wd(t){ return (t.getDay() + 6) % 7; }
+
+    var MONTHS = ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'];
+    var MONTHS_OF = ['січня', 'лютого', 'березня', 'квітня', 'травня', 'червня', 'липня', 'серпня', 'вересня', 'жовтня', 'листопада', 'грудня'];
+    var WD = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'нд'];
+    var WD_FULL = ['понеділок', 'вівторок', 'середа', 'четвер', 'п’ятниця', 'субота', 'неділя'];
+
+    /* Номери на сайті і їхні календарі. Якщо в одному типі кілька фізичних номерів,
+       у units буде кілька календарів, наприклад ['deluxe-1', 'deluxe-2']. */
+    var ROOMS = {
+      deluxe: { units: ['deluxe'], full: 'Номер Делюкс, 25 м²', name: 'Номер Делюкс', busy: 'зайнятий', only: 'вільний лише номер Делюкс' },
+      apart: { units: ['apart'], full: 'Апартаменти з балконом, 59 м²', name: 'Апартаменти з балконом', busy: 'зайняті', only: 'вільні лише апартаменти з балконом' }
+    };
+    /* Мінімум ночей: правило господарів поки не відоме, тому 1. Логіка календаря вже вміє більше. */
+    var MIN_NIGHTS = 1;
+
+    var today = new Date(); today = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12);
+    var first = mStart(today), last = mStart(addMonths(first, 11));
+    var maxDay = add(mStart(addMonths(first, 12)), -1);
+
+    /* Зайнятість: { календар: { 'YYYY-MM-DD': true } }, ніч з цієї дати на наступну.
+       Формат такий самий, як віддаватиме помічник: rooms.<календар>.busy = [[заїзд, виїзд), ...], день виїзду вільний. */
+    var busy = {};
+    function load(data){
+      var shift = 0, map = {};
+      if (data && data.source === 'demo' && data.updated_at) {
+        /* демо-дані не старіють: зсуваємо їх на цілі тижні від дати оновлення, вихідні лишаються вихідними */
+        var weeks = Math.floor(Math.round((today - parse(String(data.updated_at).slice(0, 10))) / 864e5) / 7);
+        if (weeks > 0) shift = weeks * 7;
+      }
+      var rooms = (data && data.rooms) || {};
+      Object.keys(rooms).forEach(function(u){
+        var m = map[u] = {};
+        ((rooms[u] && rooms[u].busy) || []).forEach(function(r){
+          if (!r || !r[0] || !r[1]) return;
+          for (var t = add(parse(r[0]), shift), b = add(parse(r[1]), shift); t.getTime() < b.getTime(); t = add(t, 1)) m[iso(t)] = true;
+        });
+      });
+      busy = map;
+    }
+    try { load(JSON.parse(d.getElementById('demoAvail').textContent)); } catch (x) { busy = {}; }
+
+    function roomVal(){ for (var i = 0; i < radios.length; i++) if (radios[i].checked) return radios[i].value; return 'any'; }
+    function roomKeys(v){ return v === 'any' ? Object.keys(ROOMS) : (ROOMS[v] ? [v] : []); }
+    function unitFree(u, a, b){
+      var m = busy[u]; if (!m) return true;
+      for (var t = a; t.getTime() < b.getTime(); t = add(t, 1)) if (m[iso(t)]) return false;
+      return true;
+    }
+    /* номер вільний, якщо один його календар вільний на всі ночі: переїзд між номерами посеред відпочинку не пропонуємо */
+    function freeRooms(v, a, b){ return roomKeys(v).filter(function(k){ return ROOMS[k].units.some(function(u){ return unitFree(u, a, b); }); }); }
+    function nightFree(v, t){ return freeRooms(v, t, add(t, 1)).length > 0; }
+    function canIn(v, t){ return t.getTime() >= today.getTime() && t.getTime() <= maxDay.getTime() && freeRooms(v, t, add(t, MIN_NIGHTS)).length > 0; }
+    function canOut(v, a, t){ return t.getTime() >= add(a, MIN_NIGHTS).getTime() && freeRooms(v, a, t).length > 0; }
+    /* найпізніший можливий виїзд із заїздом a: перша зайнята ніч у тому номері, який вільний найдовше.
+       Далі виїхати не можна, навіть якщо окремі ночі вільні в різних номерах. null, якщо обмеження немає до кінця календаря. */
+    function lastOut(v, a){
+      var best = a;
+      roomKeys(v).forEach(function(k){
+        ROOMS[k].units.forEach(function(u){
+          var m = busy[u] || {}, t = a;
+          while (t.getTime() <= maxDay.getTime() && !m[iso(t)]) t = add(t, 1);
+          if (t.getTime() > best.getTime()) best = t;
+        });
+      });
+      return best.getTime() > maxDay.getTime() ? null : best;
+    }
+
+    var selA = null, selB = null, hint = '', dateErr = false, lastSum = '';
+    var nView = cal.clientWidth >= 500 ? 2 : 1, view = first, focusIso = iso(today);
+
+    function visible(t){ var i = mIdx(t), v = mIdx(view); return i >= v && i < v + nView; }
+    function clampView(){
+      if (mIdx(view) + nView - 1 > mIdx(last)) view = mStart(addMonths(last, -(nView - 1)));
+      if (mIdx(view) < mIdx(first)) view = first;
+    }
+    function dayName(t){ return t.getDate() + ' ' + MONTHS_OF[t.getMonth()] + (t.getFullYear() !== today.getFullYear() ? ' ' + t.getFullYear() : ''); }
+    function shortName(t){ return WD[wd(t)] + ', ' + dayName(t); }
+    function busyHint(v, t){
+      return v === 'any'
+        ? 'На ' + dayName(t) + ' все зайнято. Оберіть іншу дату.'
+        : 'На ' + dayName(t) + ' ' + ROOMS[v].name + ' ' + ROOMS[v].busy + '. Оберіть іншу дату або «Будь-який вільний».';
+    }
+
+    function dayState(t, v){
+      var ts = t.getTime(), c = [], off = false, note = 'вільно';
+      var a = selA ? selA.getTime() : null, b = selB ? selB.getTime() : null;
+      if (ts === today.getTime()) c.push('is-today');
+      if (ts < today.getTime()) { c.push('is-past'); off = true; note = 'минула дата'; }
+      else if (a !== null && b === null) {
+        if (ts === a) { c.push('is-start'); note = 'заїзд'; }
+        else if (ts < a) {
+          if (!nightFree(v, t)) { c.push('is-busy'); off = true; note = 'зайнято'; }
+          else if (!canIn(v, t)) { c.push('is-min'); off = true; note = 'замало вільних ночей поспіль'; }
+        }
+        else if (ts < add(selA, MIN_NIGHTS).getTime()) { c.push('is-min'); off = true; note = 'мінімум ' + nights(MIN_NIGHTS); }
+        else if (canOut(v, selA, t)) { note = nightFree(v, t) ? 'можна виїхати' : 'можна виїхати цього дня, далі зайнято'; }
+        else if (!nightFree(v, t)) { c.push('is-busy'); off = true; note = 'зайнято'; }
+        /* ніч вільна, але виїхати сюди з цим заїздом не можна: приглушуємо, натискання робить цей день новим заїздом */
+        else if (canIn(v, t)) { c.push('is-nout'); note = 'не підходить для виїзду з обраним заїздом, можна обрати новим заїздом'; }
+        else { c.push('is-min'); off = true; note = 'замало вільних ночей поспіль'; }
+      } else {
+        if (a !== null && ts === a) { c.push('is-start', 'is-joined'); note = 'заїзд'; }
+        else if (b !== null && ts === b) { c.push('is-end'); note = 'виїзд'; }
+        else if (a !== null && ts > a && ts < b) { c.push('is-range'); note = 'у вибраних датах'; }
+        else if (!nightFree(v, t)) { c.push('is-busy'); off = true; note = 'зайнято'; }
+        else if (!canIn(v, t)) { c.push('is-min'); off = true; note = 'замало вільних ночей поспіль'; }
+      }
+      return { cls: c.join(' '), off: off, note: note, today: ts === today.getTime() };
+    }
+    function dayHtml(t, v){
+      var st = dayState(t, v);
+      return '<button class="cal__d' + (st.cls ? ' ' + st.cls : '') + '" type="button" tabindex="-1" data-d="' + iso(t) + '"' +
+        (st.off ? ' aria-disabled="true"' : '') + (st.today ? ' aria-current="date"' : '') +
+        ' aria-label="' + t.getDate() + ' ' + MONTHS_OF[t.getMonth()] + ', ' + WD_FULL[wd(t)] + ', ' + st.note + '"><span>' + t.getDate() + '</span></button>';
+    }
+    function monthHtml(m, k, v){
+      var id = 'calT' + k, lead = wd(m), dim = new Date(m.getFullYear(), m.getMonth() + 1, 0).getDate();
+      var s = '<div class="cal__m"><p class="cal__t" id="' + id + '">' + MONTHS[m.getMonth()] + ' ' + m.getFullYear() + '</p>' +
+        '<table class="cal__g" role="grid" aria-labelledby="' + id + '"><thead><tr>';
+      for (var w = 0; w < 7; w++) s += '<th scope="col"><span aria-hidden="true">' + WD[w] + '</span><span class="sr">' + WD_FULL[w] + '</span></th>';
+      s += '</tr></thead><tbody>';
+      for (var c = 0; c < 42; c++) {
+        var day = c - lead + 1;
+        if (c % 7 === 0) s += '<tr>';
+        s += (day >= 1 && day <= dim) ? '<td>' + dayHtml(new Date(m.getFullYear(), m.getMonth(), day, 12), v) + '</td>' : '<td></td>';
+        if (c % 7 === 6) s += '</tr>';
+      }
+      return s + '</tbody></table></div>';
+    }
+    function pickFocus(){
+      if (selA && visible(selA)) return iso(selA);
+      if (visible(today)) return iso(today);
+      return iso(view);
+    }
+    function summary(){
+      var v = roomVal(), s = '';
+      if (hint) s += '<span class="cal__hint">' + hint + '</span>';
+      if (!selA) s += 'Оберіть дату заїзду.';
+      else if (!selB) {
+        s += 'Заїзд ' + shortName(selA) + ' · оберіть дату виїзду';
+        var lo = lastOut(v, selA);
+        if (lo) s += '<small>Виїхати можна не пізніше ' + dayName(lo) + (v === 'any' ? ', бо на довше немає номера, вільного на всі ночі поспіль.' : '.') + '</small>';
+      }
+      else {
+        s += 'Заїзд ' + shortName(selA) + ' · Виїзд ' + shortName(selB) + ' · ' + nights(Math.round((selB - selA) / 864e5));
+        if (v === 'any') {
+          var fr = freeRooms(v, selA, selB);
+          s += '<small>' + (fr.length === 1 ? 'На ці дати ' + ROOMS[fr[0]].only + '.' : 'На ці дати вільні і номер Делюкс, і апартаменти.') + '</small>';
+        }
+      }
+      if (s !== lastSum) { sumEl.innerHTML = s; lastSum = s; }
+      resetBtn.hidden = !selA;
+    }
+    function render(keepFocus){
+      var ae = d.activeElement, had = keepFocus && months.contains(ae), nav = (ae === prevBtn || ae === nextBtn) ? ae : null;
+      var v = roomVal(), html = '';
+      for (var k = 0; k < nView; k++) html += monthHtml(addMonths(view, k), k, v);
+      months.style.setProperty('--n', nView);
+      months.innerHTML = html;
+      prevBtn.disabled = mIdx(view) <= mIdx(first);
+      nextBtn.disabled = mIdx(view) + nView - 1 >= mIdx(last);
+      var btn = months.querySelector('[data-d="' + focusIso + '"]');
+      if (!btn) { focusIso = pickFocus(); btn = months.querySelector('[data-d="' + focusIso + '"]'); }
+      if (btn) btn.tabIndex = 0;
+      if (btn && (had || (nav && nav.disabled))) btn.focus();
+      summary();
+    }
+    function focusDay(){ var b = months.querySelector('[tabindex="0"]'); if (b) b.focus(); }
+    /* показати вибраний заїзд, а без вибору поточний місяць; на телефоні, якщо до кінця місяця лишилося менше тижня, одразу наступний */
+    function showSel(){
+      if (selA) {
+        focusIso = iso(selA);
+        if (!visible(selA)) { view = mStart(selA); clampView(); }
+        return;
+      }
+      focusIso = iso(today);
+      view = first;
+      if (nView === 1 && new Date(today.getFullYear(), today.getMonth() + 1, 0).getDate() - today.getDate() < 6) view = addMonths(first, 1);
+    }
+    function syncHidden(){ fin.value = selA ? iso(selA) : ''; fout.value = selB ? iso(selB) : ''; }
+    function clearDateErr(){
+      cal.classList.remove('is-invalid');
+      if (dateErr) { err.textContent = ''; dateErr = false; }
+    }
+    /* після зміни номера або свіжих даних перевіряємо, чи вибір досі вільний */
+    function validate(){
+      var v = roomVal();
+      if (!selA) return;
+      if (selB ? freeRooms(v, selA, selB).length : canIn(v, selA)) return;
+      hint = v === 'any'
+        ? 'Ці дати вже зайняті, тому вибір скинуто.'
+        : ROOMS[v].name + (selB ? ' на ці дати ' : ' на цю дату ') + ROOMS[v].busy + ', тому вибір скинуто. Оберіть інші дати або «Будь-який вільний».';
+      selA = selB = null;
+      syncHidden();
+    }
+    function preview(to){
+      [].forEach.call(months.querySelectorAll('.is-preview'), function(b){ b.classList.remove('is-preview'); });
+      var sb = months.querySelector('.is-start');
+      if (!selA || selB) return;
+      var a = iso(selA), joined = false;
+      /* підсвічуємо проміжок, лише якщо на цей день справді можна виїхати */
+      if (to && to > a && canOut(roomVal(), selA, parse(to))) {
+        [].forEach.call(months.querySelectorAll('.cal__d'), function(b){
+          var x = b.getAttribute('data-d');
+          if (x > a && x < to) { b.classList.add('is-preview'); joined = true; }
+        });
+      }
+      if (sb) sb.classList.toggle('is-joined', joined);
+    }
+
+    months.addEventListener('click', function(e){
+      var btn = e.target.closest ? e.target.closest('.cal__d') : null;
+      if (!btn) return;
+      var t = parse(btn.getAttribute('data-d')), v = roomVal(), ts = t.getTime();
+      focusIso = iso(t);
+      hint = '';
+      if (btn.getAttribute('aria-disabled') === 'true') {
+        if (btn.classList.contains('is-busy')) hint = busyHint(v, t);
+        else if (btn.classList.contains('is-min')) hint = 'Мінімум ' + nights(MIN_NIGHTS) + '.';
+        render(true);
+        return;
+      }
+      clearDateErr();
+      if (selA && !selB && ts > selA.getTime()) {
+        if (canOut(v, selA, t)) selB = t;
+        else if (canIn(v, t)) {
+          hint = (v === 'any'
+            ? 'З ' + dayName(selA) + ' по ' + dayName(t) + ' немає номера, вільного на всі ночі поспіль'
+            : 'Між ' + dayName(selA) + ' і ' + dayName(t) + ' є зайняті ночі') + ', тому заїзд перенесено на ' + dayName(t) + '.';
+          selA = t;
+        }
+        else hint = 'З цим заїздом виїхати ' + dayName(t) + ' не вийде. Оберіть іншу дату.';
+      } else if (selA && !selB && ts === selA.getTime()) {
+        /* той самий день: лишаємо заїзд */
+      } else if (canIn(v, t)) { selA = t; selB = null; }
+      else hint = busyHint(v, t);
+      syncHidden();
+      render(true);
     });
+    months.addEventListener('focusin', function(e){
+      var b = e.target;
+      if (!b.getAttribute || !b.getAttribute('data-d')) return;
+      if (b.tabIndex !== 0) { var o = months.querySelector('[tabindex="0"]'); if (o) o.tabIndex = -1; b.tabIndex = 0; }
+      focusIso = b.getAttribute('data-d');
+      preview(focusIso);
+    });
+    months.addEventListener('mouseover', function(e){
+      var b = e.target.closest ? e.target.closest('.cal__d') : null;
+      if (b) preview(b.getAttribute('data-d'));
+    });
+    months.addEventListener('mouseleave', function(){ preview(null); });
+    months.addEventListener('keydown', function(e){
+      var b = e.target;
+      if (!b.getAttribute || !b.getAttribute('data-d')) return;
+      var t = parse(b.getAttribute('data-d')), n;
+      switch (e.key) {
+        case 'ArrowLeft': n = add(t, -1); break;
+        case 'ArrowRight': n = add(t, 1); break;
+        case 'ArrowUp': n = add(t, -7); break;
+        case 'ArrowDown': n = add(t, 7); break;
+        case 'Home': n = add(t, -wd(t)); break;
+        case 'End': n = add(t, 6 - wd(t)); break;
+        case 'PageUp': n = addMonths(t, -1); break;
+        case 'PageDown': n = addMonths(t, 1); break;
+        default: return;
+      }
+      e.preventDefault();
+      if (n.getTime() < first.getTime()) n = first;
+      if (n.getTime() > maxDay.getTime()) n = maxDay;
+      focusIso = iso(n);
+      if (visible(n)) {
+        var o = months.querySelector('[tabindex="0"]'), nb = months.querySelector('[data-d="' + focusIso + '"]');
+        if (o) o.tabIndex = -1;
+        if (nb) { nb.tabIndex = 0; nb.focus(); }
+        return;
+      }
+      view = mIdx(n) < mIdx(view) ? mStart(n) : mStart(addMonths(mStart(n), -(nView - 1)));
+      clampView();
+      render(false);
+      focusDay();
+    });
+    prevBtn.addEventListener('click', function(){ if (mIdx(view) > mIdx(first)) { view = addMonths(view, -1); render(false); } });
+    nextBtn.addEventListener('click', function(){ if (mIdx(view) + nView - 1 < mIdx(last)) { view = addMonths(view, 1); render(false); } });
+    resetBtn.addEventListener('click', function(){
+      selA = selB = null; hint = '';
+      syncHidden(); clearDateErr();
+      render(false);
+      focusDay();
+    });
+    radios.forEach(function(r){
+      r.addEventListener('change', function(){ hint = ''; validate(); render(false); });
+    });
+
+    function fit(){
+      var w = cal.clientWidth;
+      if (!w) return;
+      var n = w >= 500 ? 2 : 1;
+      if (n !== nView) { nView = n; clampView(); render(false); }
+    }
+    showSel();
+    render(false);
+    if ('ResizeObserver' in window) new ResizeObserver(fit).observe(cal);
+    else window.addEventListener('resize', fit, { passive: true });
+
+    /* Демо читає файл з умовною зайнятістю. У робочій версії тут буде адреса помічника на Cloudflare,
+       який кожні 15 хвилин збирає календарі з Booking і Airbnb. Якщо файл не відкрився, лишаються вбудовані дані. */
+    if (window.fetch) {
+      fetch('demo-availability.json', { cache: 'no-store' })
+        .then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function(data){ load(data); validate(); render(false); })
+        .catch(function(){});
+    }
+
     [].forEach.call(f.querySelectorAll('[data-step]'), function(b){
       b.addEventListener('click', function(){
         var v = (parseInt(g.value, 10) || 1) + parseInt(b.getAttribute('data-step'), 10);
@@ -1392,33 +1769,43 @@ textarea.inp{height:auto;min-height:96px;padding:13px 14px;line-height:1.45;resi
       });
     });
     [].forEach.call(d.querySelectorAll('[data-room]'), function(a){
-      a.addEventListener('click', function(){
-        room.value = a.getAttribute('data-room');
-        if (a.getAttribute('data-room') === 'apart' && (parseInt(g.value, 10) || 0) < 3) g.value = 4;
+      a.addEventListener('click', function(e){
+        var v = a.getAttribute('data-room'), card = f.parentNode;
+        e.preventDefault();
+        radios.forEach(function(r){ r.checked = r.value === v; });
+        if (v === 'apart' && (parseInt(g.value, 10) || 0) < 3) g.value = 4;
         if (f.hidden) { done.hidden = true; f.hidden = false; }
+        hint = ''; validate(); showSel(); render(false);
+        card.scrollIntoView({ behavior: reduce.matches ? 'auto' : 'smooth', block: 'start' });
+        if (history.replaceState) history.replaceState(null, '', '#booking');
+        var r = f.querySelector('input[name="room"]:checked');
+        if (r) { try { r.focus({ preventScroll: true }); } catch (x) {} }
       });
     });
     [nm, ph].forEach(function(el){ el.addEventListener('input', function(){ el.removeAttribute('aria-invalid'); }); });
-    f.addEventListener('submit', function(e){
-      e.preventDefault();
-      var bad = null, msg = '';
-      [fin, fout, nm, ph].forEach(function(el){ el.removeAttribute('aria-invalid'); });
-      var digits = ph.value.replace(/\D/g, '');
-      if (!fin.value) { bad = fin; msg = 'Вкажіть дату заїзду.'; }
-      else if (!fout.value) { bad = fout; msg = 'Вкажіть дату виїзду.'; }
-      else if (fout.value <= fin.value) { bad = fout; msg = 'Дата виїзду має бути пізніше за дату заїзду.'; }
-      else if (!nm.value.trim()) { bad = nm; msg = 'Вкажіть, як до вас звертатися.'; }
-      else if (digits.length < 9) { bad = ph; msg = 'Вкажіть телефон, щоб господарі могли відповісти.'; }
-      if (bad) { err.textContent = msg; bad.setAttribute('aria-invalid', 'true'); bad.focus(); return; }
-      err.textContent = '';
-      var n = Math.round((parse(fout.value) - parse(fin.value)) / 864e5);
-      var roomTxt = room.options[room.selectedIndex].text;
-      var m = f.querySelector('input[name="msgr"]:checked');
+
+    function fail(bad, msg, showInCal){
+      err.textContent = msg;
+      if (bad === cal) {
+        dateErr = true;
+        cal.classList.add('is-invalid');
+        if (showInCal) hint = msg;
+        showSel();
+        render(false);
+        focusDay();
+      } else { bad.setAttribute('aria-invalid', 'true'); bad.focus(); }
+    }
+    function showDone(){
+      var v = roomVal(), n = Math.round((selB - selA) / 864e5), m = f.querySelector('input[name="msgr"]:checked');
+      var roomLine = v === 'any'
+        ? 'Номер: будь-який вільний (на ці дати вільні: ' + freeRooms(v, selA, selB).map(function(k){ return ROOMS[k].full; }).join('; ') + ')'
+        : 'Номер: ' + ROOMS[v].full;
       var lines = [
         'Нова заявка з сайту Romantic Guest House',
         'Дати: ' + human(fin.value) + ' → ' + human(fout.value) + ' (' + nights(n) + ')',
+        'Календар: на момент заявки дати вільні',
+        roomLine,
         'Гостей: ' + g.value,
-        'Номер: ' + roomTxt,
         'Чан: ' + (chan.checked ? 'так, хочуть на один із вечорів' : 'не потрібен'),
         'Ім’я: ' + nm.value.trim(),
         'Телефон: ' + ph.value.trim(),
@@ -1429,11 +1816,43 @@ textarea.inp{height:auto;min-height:96px;padding:13px 14px;line-height:1.45;resi
       f.hidden = true;
       done.hidden = false;
       d.getElementById('doneTitle').focus();
+    }
+    var checking = false;
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      if (checking) return;
+      [nm, ph].forEach(function(el){ el.removeAttribute('aria-invalid'); });
+      cal.classList.remove('is-invalid');
+      var v = roomVal(), digits = ph.value.replace(/\D/g, '');
+      if (!selA) return fail(cal, 'Оберіть дату заїзду в календарі.');
+      if (!selB) return fail(cal, 'Оберіть дату виїзду в календарі.');
+      if (!freeRooms(v, selA, selB).length) { selA = selB = null; syncHidden(); return fail(cal, 'Ці дати вже зайняті. Оберіть, будь ласка, інші.', true); }
+      if (!nm.value.trim()) return fail(nm, 'Вкажіть, як до вас звертатися.');
+      if (digits.length < 9) return fail(ph, 'Вкажіть телефон, щоб господарі могли відповісти.');
+      err.textContent = ''; dateErr = false;
+      /* як на робочому сайті: перед відправкою ще раз звіряємо дати з календарем */
+      checking = true;
+      var label = submit.innerHTML;
+      submit.disabled = true;
+      submit.textContent = 'Перевіряємо дати…';
+      setTimeout(function(){
+        checking = false;
+        submit.disabled = false;
+        submit.innerHTML = label;
+        if (!selA || !selB || !freeRooms(roomVal(), selA, selB).length) {
+          selA = selB = null; syncHidden();
+          fail(cal, 'Ці дати вже зайняті. Оберіть, будь ласка, інші.', true);
+          return;
+        }
+        showDone();
+      }, 650);
     });
     d.getElementById('doneBack').addEventListener('click', function(){
       done.hidden = true;
       f.hidden = false;
-      fin.focus();
+      showSel();
+      render(false);
+      focusDay();
     });
   })();
 })();
